@@ -721,7 +721,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"centralrestaurantv2.20220929.080632\",\n  \"PageNo\": 1,\n  \"Keyword\": \"29A-023\"\n\n}"
+							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"{{index_name}}\",\n  \"PageNo\": 1,\n  \"Keyword\": \"29A-023\"\n\n}"
 						},
 						"url": "{{search_api_url}}api/v2/search"
 					},
@@ -1384,7 +1384,7 @@
 	],
 	"variable": [
 		{
-			"id": "5a5ad0be-09ed-4580-9ea1-000bab3bb753",
+			"id": "362da3b8-3733-40d7-b1f2-3c3517a579ee",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
