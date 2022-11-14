@@ -16,7 +16,7 @@
 							"script": {
 								"id": "4dc352c3-e9ab-4dea-9de1-199166e1440b",
 								"exec": [
-									"pm.test(\"Responce to have indexes\", function () {",
+									"pm.test(\"Response to have indexes\", function () {",
 									"    pm.response.to.have.status(200);",
 									"    ",
 									"    const jsonData = pm.response.json();",
@@ -1379,7 +1379,7 @@
 	],
 	"variable": [
 		{
-			"id": "929df3c8-d99b-4f92-b57a-a8ed6e6016ae",
+			"id": "6b415b20-17a8-4d5b-9b3e-249346bc15e8",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
