@@ -1311,7 +1311,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "860f289e-1dab-4df6-bdd0-3cec5dbb2064",
+				"id": "914b2844-0366-47e9-9eed-2d26758d1b65",
 				"type": "text/javascript",
 				"exec": [
 					"var myVar = null;",
@@ -1334,9 +1334,9 @@
 					"}",
 					"",
 					"console.log(\"Environment: \" + pm.variables.get(\"env\"));",
-					"console.log(pm.variables.get(\"dashboard_api_url\"));",
-					"console.log(pm.variables.get(\"indexing_api_url\"));",
-					"console.log(pm.variables.get(\"search_api_url\"));",
+					"console.log(\"Dashboard API URL: \" + pm.variables.get(\"dashboard_api_url\"));",
+					"console.log(\"Indexing API URL: \" + pm.variables.get(\"indexing_api_url\"));",
+					"console.log(\"Search API URL: \" + pm.variables.get(\"search_api_url\"));",
 					""
 				]
 			}
@@ -1344,7 +1344,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "7b45da71-40a3-4cca-82a7-adb92241b7e0",
+				"id": "aa501419-48ef-495d-9940-2f5134f488d6",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1354,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "b712060f-642f-407e-915c-8eda6f2d5749",
+			"id": "61115781-ed58-4e22-a853-32da0ef6ebf7",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
