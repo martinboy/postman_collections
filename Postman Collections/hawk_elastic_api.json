@@ -67,13 +67,13 @@
 							"script": {
 								"id": "78cdaa1a-9792-4f13-9b30-827c295291b9",
 								"exec": [
-									"",
+									"var testResult;",
 									"var result = pm.test(\"Index test\", function () {",
-									"    pm.response.to.have.status(200);",
+									"    testResult = pm.response.to.have.status(200) || testResult;",
 									"    ",
 									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData).to.be.an(\"object\");",
-									"    pm.expect(jsonData.IndexName).to.be.a(\"string\");",
+									"    testResult = pm.expect(jsonData).to.be.an(\"object\") || testResult;",
+									"    testResult = pm.expect(jsonData.IndexName).to.be.a(\"string\") || testResult;",
 									"});",
 									"console.log(result);",
 									"//console.log(pm.response.json());",
@@ -1359,7 +1359,7 @@
 	],
 	"variable": [
 		{
-			"id": "1c774682-6e66-4d7d-b6af-a8e5a2337f14",
+			"id": "f59f43f7-2191-46f3-9171-69d62b1c3b6a",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
