@@ -21,7 +21,7 @@
 									"    ",
 									"    const jsonData = pm.response.json();",
 									"    pm.expect(jsonData).to.be.an(\"object\");",
-									"    pm.expect(jsonData.IndexNames).to.have.lengthOf(2);",
+									"    pm.expect(jsonData.IndexNames).to.have.lengthOf.at.least(1);",
 									"    ",
 									"});",
 									"",
@@ -1378,7 +1378,7 @@
 	],
 	"variable": [
 		{
-			"id": "1a07003d-a780-44f4-88cd-e77e73b0429e",
+			"id": "acb7a02d-9e8c-400b-98b8-10152c2ac479",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
