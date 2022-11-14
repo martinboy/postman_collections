@@ -1302,7 +1302,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "2062c16c-b59f-4d6d-b207-69e228d4713d",
+				"id": "474e2ffb-40fb-48e0-af6d-f35bdc5c2cfc",
 				"type": "text/javascript",
 				"exec": [
 					"var myVar = null;",
@@ -1322,7 +1322,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "24659444-cb5a-41ab-a167-ea4239e192c7",
+				"id": "5fc2af51-8ba4-48db-befb-7750cb5520c4",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1332,10 +1332,11 @@
 	],
 	"variable": [
 		{
-			"id": "87b98fe5-8d93-46be-a970-af3f5e0cbb0a",
+			"id": "667fdea9-ad19-4ed3-8f38-cb5fb6ef58b0",
 			"key": "hawkMode",
 			"value": "devCollection",
-			"type": "string"
+			"type": "string",
+			"disabled": true
 		}
 	]
 }
