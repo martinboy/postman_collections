@@ -67,22 +67,17 @@
 							"script": {
 								"id": "78cdaa1a-9792-4f13-9b30-827c295291b9",
 								"exec": [
-									"var testResult = false;",
-									"var result = pm.test(\"Index test\", function () {",
-									"    testResult = pm.response.to.have.status(200);// || testResult;",
-									"    ",
-									"    //const jsonData = pm.response.json();",
-									"    //testResult = pm.expect(jsonData).to.be.an(\"object\") || testResult;",
-									"    //testResult = pm.expect(jsonData.IndexName).to.be.a(\"string\") || testResult;",
-									"});",
-									"console.log(testResult);",
-									"//console.log(pm.response.json());",
-									"//var jsonData = JSON.parse(pm.response);",
-									"//console.log(jsonData)",
 									"",
-									"//jsonData = pm.response;",
-									"//console.log(jsonData.id)",
-									"//pm.environment.set(\"current_index_name\", jsonData.IndexName);"
+									"pm.test(\"Index test\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an(\"object\");",
+									"    pm.expect(jsonData.IndexName).to.be.a(\"string\");",
+									"});",
+									"",
+									"const jsonData = pm.response.json();",
+									"pm.environment.set(\"current_index_name\", jsonData.IndexName);"
 								],
 								"type": "text/javascript"
 							}
@@ -1359,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "7373b520-77d9-4f9a-95e1-95a53280fed7",
+			"id": "2e1ecb48-ba4d-4044-90ce-666c60686f5c",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
