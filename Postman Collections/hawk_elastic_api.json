@@ -439,9 +439,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hawk_elastic_indexing_api_url_dev}}api/hierarchy",
+							"raw": "{{indexing_api_url}}api/hierarchy",
 							"host": [
-								"{{hawk_elastic_indexing_api_url_dev}}api"
+								"{{indexing_api_url}}api"
 							],
 							"path": [
 								"hierarchy"
@@ -1354,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "aeb0f909-18dd-4307-95e6-27a1a66df987",
+			"id": "0583e73e-8e25-4440-bf50-e20b3f24a1a9",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
