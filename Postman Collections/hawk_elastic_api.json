@@ -38,9 +38,9 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/",
+							"raw": "{{indexing_api_url}}api/v2/indexing/",
 							"host": [
-								"{{hawk_elastic_indexing_api_url_dev}}api"
+								"{{indexing_api_url}}api"
 							],
 							"path": [
 								"v2",
@@ -1345,7 +1345,7 @@
 	],
 	"variable": [
 		{
-			"id": "6341cd46-d78f-4aec-beeb-31bd833e2789",
+			"id": "42873442-e7f2-4c88-84e4-5696e0d3eeaa",
 			"key": "hawkMode",
 			"value": "prod",
 			"type": "string"
