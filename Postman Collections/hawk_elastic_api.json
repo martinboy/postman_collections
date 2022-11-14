@@ -25,10 +25,9 @@
 									"    ",
 									"});",
 									"",
-									"",
-									"",
-									"//const jsonData = pm.response.json();",
-									"//pm.environment.set(\"current_index_name\", jsonData.IndexName);"
+									"const jsonData = pm.response.json();",
+									"var nonCurrentIndex = jsonData.IndexNames[0];",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -1378,7 +1377,7 @@
 	],
 	"variable": [
 		{
-			"id": "acb7a02d-9e8c-400b-98b8-10152c2ac479",
+			"id": "a02a26c7-6c41-497b-9669-7ae66a42ab1c",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
