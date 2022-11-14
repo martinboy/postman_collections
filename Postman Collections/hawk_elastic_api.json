@@ -1311,7 +1311,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "518a669f-cc54-44bc-8993-e072a62a0e1c",
+				"id": "17328a53-24a0-4ae9-bd53-c74a21cbd9cf",
 				"type": "text/javascript",
 				"exec": [
 					"var myVar = null;",
@@ -1344,7 +1344,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "25e50154-74f0-4520-acd1-df752769c7ea",
+				"id": "3e20d361-5fe2-43a4-b81d-fc80316edae4",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1354,8 +1354,8 @@
 	],
 	"variable": [
 		{
-			"id": "1485da5a-4555-4824-8773-cd4313223682",
-			"key": "hawkMode",
+			"id": "4f17a512-24b4-4816-b880-dd068e809403",
+			"key": "env",
 			"value": "prod",
 			"type": "string"
 		}
