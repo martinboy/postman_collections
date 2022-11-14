@@ -10,6 +10,18 @@
 			"item": [
 				{
 					"name": "Get All Indexes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4dc352c3-e9ab-4dea-9de1-199166e1440b",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "522f93d1-93ad-4a02-839c-9d15bd3a6044",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1354,7 +1366,7 @@
 	],
 	"variable": [
 		{
-			"id": "7634cb13-5d9f-4e77-b90b-9596bb46e78b",
+			"id": "65733261-bfa2-4302-b592-23680660bcfd",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
