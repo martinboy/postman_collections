@@ -21,7 +21,8 @@
 									"    ",
 									"    const jsonData = pm.response.json();",
 									"    pm.expect(jsonData).to.be.an(\"object\");",
-									"    pm.expect(jsonData).to.have.lengthOf(2);",
+									"    //pm.expect(jsonData.IndexNames).to.be.a(\"array\");",
+									"    pm.expect(jsonData.IndexNames).to.have.lengthOf(2);",
 									"    //pm.expect(jsonData).to.have.keys",
 									"});",
 									"",
@@ -1378,7 +1379,7 @@
 	],
 	"variable": [
 		{
-			"id": "f1dbd63a-1d15-4cce-973a-bd24dfa0d3f8",
+			"id": "929df3c8-d99b-4f92-b57a-a8ed6e6016ae",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
