@@ -83,7 +83,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/current"
+						"url": "https://indexingapi-na.hawksearch.com/api/v2/indexing/current"
 					},
 					"response": []
 				},
@@ -1312,7 +1312,7 @@
 	],
 	"variable": [
 		{
-			"id": "57ba05c3-1317-4e86-9dce-0f60d0d34172",
+			"id": "0e7cd9bf-dbcb-4a2d-8e09-bbc7dafe078b",
 			"key": "hawkMode",
 			"value": "dev",
 			"type": "string"
