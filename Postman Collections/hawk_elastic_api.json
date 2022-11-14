@@ -1302,7 +1302,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "1393f0fc-55df-43fa-a792-d443fe1709a5",
+				"id": "7808f04a-5909-4551-9da1-75e487972e54",
 				"type": "text/javascript",
 				"exec": [
 					"var myVar = null;",
@@ -1323,14 +1323,9 @@
 					"        pm.variables.set(\"indexing_api_url\", pm.variables.get(\"indexing_api_url_dev\"));",
 					"        pm.variables.set(\"search_api_url\", pm.variables.get(\"search_api_url_dev\"));",
 					"}",
-					"console.log(pm.globals.get(\"hawkMode\"));",
-					"console.log(pm.collectionVariables.get(\"hawkMode\"));",
-					"console.log(pm.environment.get(\"hawkMode\"));",
-					"",
-					"",
-					"",
-					"//pm.variables.set(\"hawkMode2\", \"222\");",
-					"console.log(pm.variables.get(\"hawkMode\"));",
+					"console.log(pm.variables.get(\"dashboard_api_url\"));",
+					"console.log(pm.variables.get(\"indexing_api_url\"));",
+					"console.log(pm.variables.get(\"search_api_url\"));",
 					""
 				]
 			}
@@ -1338,7 +1333,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "f3cddb6a-c983-43e6-8c6b-2d54e0fe9b22",
+				"id": "c7ae8103-6188-40e4-a642-b71ed148c8ba",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1348,7 +1343,7 @@
 	],
 	"variable": [
 		{
-			"id": "a32ddc0e-3773-4155-a770-014bebba0fdf",
+			"id": "02c7d4d3-15c6-40e3-8cfc-e67922b5b0d9",
 			"key": "hawkMode",
 			"value": "devCollection",
 			"type": "string",
