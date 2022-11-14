@@ -16,7 +16,19 @@
 							"script": {
 								"id": "4dc352c3-e9ab-4dea-9de1-199166e1440b",
 								"exec": [
-									""
+									"pm.test(\"Responce to have indexes\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an(\"object\");",
+									"    pm.expect(jsonData).to.have.lengthOf(2);",
+									"    //pm.expect(jsonData).to.have.keys",
+									"});",
+									"",
+									"",
+									"",
+									"//const jsonData = pm.response.json();",
+									"//pm.environment.set(\"current_index_name\", jsonData.IndexName);"
 								],
 								"type": "text/javascript"
 							}
@@ -1366,7 +1378,7 @@
 	],
 	"variable": [
 		{
-			"id": "65733261-bfa2-4302-b592-23680660bcfd",
+			"id": "f1dbd63a-1d15-4cce-973a-bd24dfa0d3f8",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
