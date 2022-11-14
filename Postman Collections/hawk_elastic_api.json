@@ -26,6 +26,9 @@
 									"});",
 									"",
 									"const jsonData = pm.response.json();",
+									"for (let i = 0; i < jsonData.IndexNames.length; i++) {",
+									"",
+									"}",
 									"var nonCurrentIndex = jsonData.IndexNames[0];",
 									""
 								],
@@ -1377,7 +1380,7 @@
 	],
 	"variable": [
 		{
-			"id": "a02a26c7-6c41-497b-9669-7ae66a42ab1c",
+			"id": "cddbc7a2-4ec2-49a4-969e-9c224a460ff1",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
