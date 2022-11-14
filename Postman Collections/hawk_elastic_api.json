@@ -275,7 +275,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/magentoelastic.20200528.234029"
+						"url": "{{indexing_api_url}}api/v2/indexing/magentoelastic.20200528.234029"
 					},
 					"response": []
 				}
@@ -1354,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "89db4a2e-cf8f-4087-896f-b2a26b072366",
+			"id": "08dbc38b-a8bb-4d23-bc95-113c55452523",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
