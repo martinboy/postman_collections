@@ -1306,7 +1306,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "3ec4d9e4-89d7-4d4c-83af-59999053b087",
+				"id": "66fecf2c-581c-464a-a5ae-85f60cbc443b",
 				"type": "text/javascript",
 				"exec": [
 					"var myVar = null;",
@@ -1339,7 +1339,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "6197b8b7-3d7b-4226-b2c5-c01aa49fc4a8",
+				"id": "e4fa8e49-236e-4b6f-ae16-a98091f7cc13",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1349,7 +1349,7 @@
 	],
 	"variable": [
 		{
-			"id": "4fde0a17-bc49-4dbd-b179-e18e833a0ebb",
+			"id": "9fc75900-fb3d-4162-82b2-c57e5bf6e346",
 			"key": "hawkMode",
 			"value": "prod",
 			"type": "string"
