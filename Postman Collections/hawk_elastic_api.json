@@ -1302,23 +1302,19 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "610a0cfc-98f1-4218-a40b-f06dfe44624c",
+				"id": "2062c16c-b59f-4d6d-b207-69e228d4713d",
 				"type": "text/javascript",
 				"exec": [
 					"var myVar = null;",
 					"",
-					"myVar = pm.globals.get(\"hawkMode\");",
-					"console.log(myVar);",
-					"myVar = pm.collectionVariables.get(\"hawkMode\");",
-					"console.log(myVar);",
-					"myVar = pm.environment.get(\"hawkMode\");",
-					"console.log(myVar);",
+					"console.log(pm.globals.get(\"hawkMode\"));",
+					"console.log(pm.collectionVariables.get(\"hawkMode\"));",
+					"console.log(pm.environment.get(\"hawkMode\"));",
 					"",
 					"",
 					"",
 					"//pm.variables.set(\"hawkMode2\", \"222\");",
-					"myVar = pm.variables.get(\"hawkMode\");",
-					"console.log(myVar);",
+					"console.log(pm.variables.get(\"hawkMode\"));",
 					""
 				]
 			}
@@ -1326,7 +1322,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "f06dca6f-11da-46c1-9a15-575ca88ef809",
+				"id": "24659444-cb5a-41ab-a167-ea4239e192c7",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1336,7 +1332,7 @@
 	],
 	"variable": [
 		{
-			"id": "f5a2f737-5a48-490b-a2d8-33449b6a956e",
+			"id": "87b98fe5-8d93-46be-a970-af3f5e0cbb0a",
 			"key": "hawkMode",
 			"value": "devCollection",
 			"type": "string"
