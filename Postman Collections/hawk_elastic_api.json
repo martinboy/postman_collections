@@ -26,10 +26,11 @@
 									"});",
 									"",
 									"const jsonData = pm.response.json();",
+									"let nonCurrentIndex;",
 									"for (let i = 0; i < jsonData.IndexNames.length; i++) {",
-									"",
+									"    ",
 									"}",
-									"var nonCurrentIndex = jsonData.IndexNames[0];",
+									"",
 									""
 								],
 								"type": "text/javascript"
@@ -1380,7 +1381,7 @@
 	],
 	"variable": [
 		{
-			"id": "cddbc7a2-4ec2-49a4-969e-9c224a460ff1",
+			"id": "16b0ada9-6b95-473f-a128-bd7f08553883",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
