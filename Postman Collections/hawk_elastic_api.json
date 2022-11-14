@@ -1284,10 +1284,15 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "9aa6eab1-c44f-47d6-8f17-0b1c0448f1b9",
+				"id": "69d80c1d-6183-4c4d-8e1d-f6e119fcccc8",
 				"type": "text/javascript",
 				"exec": [
 					"const myVar = null;",
+					"",
+					"myVar = pm.environment.get(\"variable_key\");",
+					"myVar = pm.globals.get(\"variable_key\");",
+					"myVar = pm.variables.get(\"variable_key\");",
+					"myVar = pm.collectionVariables.get(\"variable_key\");",
 					"",
 					"",
 					"console.log(myVar);"
@@ -1297,7 +1302,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "2c4490a8-ee3a-4f3a-9dcc-12a51b11d39c",
+				"id": "fdc0f644-9287-4ebd-aaad-8eb0080bbb45",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1307,7 +1312,7 @@
 	],
 	"variable": [
 		{
-			"id": "b975a74f-c05b-4e6d-9198-cb3621309083",
+			"id": "72d9b71d-41f3-4a81-abd9-4a6fc810e765",
 			"key": "hawkMode",
 			"value": "dev",
 			"type": "string"
