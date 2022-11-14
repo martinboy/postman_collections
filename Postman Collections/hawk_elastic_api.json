@@ -21,9 +21,8 @@
 									"    ",
 									"    const jsonData = pm.response.json();",
 									"    pm.expect(jsonData).to.be.an(\"object\");",
-									"    //pm.expect(jsonData.IndexNames).to.be.a(\"array\");",
 									"    pm.expect(jsonData.IndexNames).to.have.lengthOf(2);",
-									"    //pm.expect(jsonData).to.have.keys",
+									"    ",
 									"});",
 									"",
 									"",
@@ -1379,7 +1378,7 @@
 	],
 	"variable": [
 		{
-			"id": "6b415b20-17a8-4d5b-9b3e-249346bc15e8",
+			"id": "be5a15d7-c7e9-4a1a-9d68-e9fdd9c16cd8",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
