@@ -1302,11 +1302,27 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "474e2ffb-40fb-48e0-af6d-f35bdc5c2cfc",
+				"id": "6e1ca316-f7ca-4a61-a2d6-f30338f1afe6",
 				"type": "text/javascript",
 				"exec": [
 					"var myVar = null;",
 					"",
+					"switch (pm.environment.get(\"hawkMode\")) {",
+					"    case \"prod\":",
+					"        pm.variables.set(\"dashboard_api_url\", pm.environment.get(\"dashboard_api_url_prod\"));",
+					"        pm.variables.set(\"indexing_api_url\", pm.environment.get(\"indexing_api_url_prod\"));",
+					"        pm.variables.set(\"search_api_url\", pm.environment.get(\"search_api_url_prod\"));",
+					"        break;",
+					"    case \"test\":",
+					"        pm.variables.set(\"dashboard_api_url\", pm.environment.get(\"dashboard_api_url_test\"));",
+					"        pm.variables.set(\"indexing_api_url\", pm.environment.get(\"indexing_api_url_test\"));",
+					"        pm.variables.set(\"search_api_url\", pm.environment.get(\"search_api_url_test\"));",
+					"        break;",
+					"    default:",
+					"        pm.variables.set(\"dashboard_api_url\", pm.environment.get(\"dashboard_api_url_dev\"));",
+					"        pm.variables.set(\"indexing_api_url\", pm.environment.get(\"indexing_api_url_dev\"));",
+					"        pm.variables.set(\"search_api_url\", pm.environment.get(\"search_api_url_dev\"));",
+					"}",
 					"console.log(pm.globals.get(\"hawkMode\"));",
 					"console.log(pm.collectionVariables.get(\"hawkMode\"));",
 					"console.log(pm.environment.get(\"hawkMode\"));",
@@ -1322,7 +1338,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "5fc2af51-8ba4-48db-befb-7750cb5520c4",
+				"id": "2c3ab974-f50f-4b3d-96a8-5fa0107c3e06",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1332,7 +1348,7 @@
 	],
 	"variable": [
 		{
-			"id": "667fdea9-ad19-4ed3-8f38-cb5fb6ef58b0",
+			"id": "c31fede2-783e-4baf-b556-6f35db1855a0",
 			"key": "hawkMode",
 			"value": "devCollection",
 			"type": "string",
