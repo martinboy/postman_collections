@@ -69,8 +69,9 @@
 								"exec": [
 									"",
 									"pm.test(\"Index test\", function () {",
-									"    const jsonData = pm.response.json();",
 									"    pm.response.to.have.status(200);",
+									"    const jsonData = pm.response.json();",
+									"    ",
 									"    pm.expect(jsonData).to.be.an(\"object\");",
 									"    pm.expect(jsonData.IndexName).to.be.a(\"string\");",
 									"});",
@@ -1358,7 +1359,7 @@
 	],
 	"variable": [
 		{
-			"id": "db9bb6b4-83f0-4efc-96e2-991d9f23f5c6",
+			"id": "70f20981-c874-4fcf-a7fc-7d163777f017",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
