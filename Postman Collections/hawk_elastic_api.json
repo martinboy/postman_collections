@@ -409,7 +409,7 @@
 								}
 							}
 						},
-						"url": "{{hawk_elastic_indexing_api_url_dev}}api/hierarchy/upsert",
+						"url": "{{indexing_api_url}}api/hierarchy/upsert",
 						"description": "The Upsert method is used to insert hierarchy records.  The hierarchy records are often categories or departments. There is a limit of 125 hierarchy objects that can be sent in a request.  This method can be called multiple times to accommodate more than 125.  After all hierarchy objects have been sent, the hierarchy/rebuild method can be used."
 					},
 					"response": []
@@ -1354,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "16a11c54-f1e1-4789-837c-7e48ffa59ea2",
+			"id": "aeb0f909-18dd-4307-95e6-27a1a66df987",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
