@@ -68,15 +68,15 @@
 								"id": "78cdaa1a-9792-4f13-9b30-827c295291b9",
 								"exec": [
 									"",
-									"pm.test(\"Index test\", function () {",
+									"var result = pm.test(\"Index test\", function () {",
 									"    pm.response.to.have.status(200);",
 									"    ",
 									"    const jsonData = pm.response.json();",
 									"    pm.expect(jsonData).to.be.an(\"object\");",
 									"    pm.expect(jsonData.IndexName).to.be.a(\"string\");",
-									"    pm.expect(jsonData.IndexName2).to.be.not.undefined;",
+									"   // pm.expect(jsonData.IndexName2).to.be.not.undefined;",
 									"});",
-									"//console.log(jsonData);",
+									"console.log(result);",
 									"//console.log(pm.response.json());",
 									"//var jsonData = JSON.parse(pm.response);",
 									"//console.log(jsonData)",
@@ -1360,7 +1360,7 @@
 	],
 	"variable": [
 		{
-			"id": "78d0d2a0-9fd4-4fbb-a1ae-66451c508077",
+			"id": "dfad4350-be84-4224-a289-d1ab3b0c6eab",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
