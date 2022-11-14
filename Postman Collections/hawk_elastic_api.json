@@ -721,7 +721,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"{{index_name}}\",\n  \"PageNo\": 1,\n  \"Keyword\": \"29A-023\"\n\n}"
+							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"{{index_name}}\",\n  \"PageNo\": 1,\n  \"Keyword\": \"29A-023\"\n}"
 						},
 						"url": "{{search_api_url}}api/v2/search"
 					},
@@ -1384,7 +1384,7 @@
 	],
 	"variable": [
 		{
-			"id": "c8710dd2-ec5a-4afe-a42e-3134f735cead",
+			"id": "1af07528-45f0-4961-881f-ec31068b2ea5",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
