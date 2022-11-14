@@ -1,0 +1,1358 @@
+{
+	"info": {
+		"_postman_id": "ba3592d2-16ac-4ede-8c08-e53976921216",
+		"name": "Hawksearch - Elastic API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Indices",
+			"item": [
+				{
+					"name": "Get All Indexes",
+					"_postman_id": "522f93d1-93ad-4a02-839c-9d15bd3a6044",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Index",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "78cdaa1a-9792-4f13-9b30-827c295291b9",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"current_index_name\", jsonData.IndexName);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "28a7c032-7e34-4eec-a5f1-6803c4a3e2ef",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/current"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Index",
+					"_postman_id": "0d365935-0627-499d-a325-136ba753c181",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Current Index",
+					"_postman_id": "7eab6ed3-68df-4ae8-bfe5-b2906050f845",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"IndexName\": \"magentoelastic.20200904.071842.ggg\"\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/set-current"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Index",
+					"_postman_id": "57ae9c2c-a703-4da0-9ae2-61970b32d691",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"IndexName\": \"magentoelastic.20210201.134824\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/delete-index"
+					},
+					"response": []
+				},
+				{
+					"name": "Clone Index",
+					"_postman_id": "aabbb255-2949-4765-84d5-af6772cdb18a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"IndexName\": \"magentoelastic.20210201.134824\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/clone"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Index",
+					"_postman_id": "38442cb0-45d1-40b6-a20c-ff4747db308e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/magentoelastic.20200528.234029"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "e91dfe1c-a884-4d05-b41a-aa6dd516b5e7"
+		},
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "Index Items",
+					"_postman_id": "fe51aaa1-fcce-46be-a2e7-f300f90f8907",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n       \"IndexName\": \"demo.20200221.090452\",\n       \"Items\": [\n           {\n  \"__uid\": [\n    \"product_30354\"\n  ],\n  \"__type\": [\n    \"product\"\n  ],\n  \"name\": [\n    \"Chronos 29A-023 - Replacement Blade - Fits 29A-014 (1/4\\\") Tomato Slicer\"\n  ],\n  \"sku\": [\n    \"29A-023\"\n  ],\n  \"brand\": [\n    \"Chronos\"\n  ],\n  \"visibility\": [\n    \"Catalog, Search\"\n  ],\n  \"vpn\": [\n    \"29A-023\"\n  ],\n  \"free_shipping\": [\n    \"No\"\n  ],\n  \"price\": [\n    \"18.990000\"\n  ],\n  \"category_ids\": [\n    \"596\",\n    \"1\",\n    \"2\",\n    \"54\",\n    \"2640\"\n  ],\n  \"description\": [\n    \"The Chronos 29A-023 Blade Replacement is a replacement part for the Chronos 1/4\\\" Tomato Slicer. Available exclusively at a highly competitive price point exclusively at Central.<strong>Features of the Chronos 29A-023 Include:</strong><ul><li>Angled razor sharp corrosion resistant stainless steel blades for consistent slices</li><li>For 29A-014 (1/4\\\") tomato slicer</li></ul>\"\n  ],\n  \"type\": [\n    \"Replacement Blades\"\n  ],\n  \"image\": [\n    \"/2/9/29a-024.jpg\"\n  ],\n  \"nsf_listed\": [\n    \"Yes\"\n  ],\n  \"options_container\": [\n    \"Block after Info Column\"\n  ],\n  \"quantity_and_stock_status\": [\n    \"In Stock\"\n  ],\n  \"slice_size\": [\n    \"1/4\\\"\"\n  ],\n  \"status\": [\n    \"Enabled\"\n  ],\n  \"weight\": [\n    \"4.000000\"\n  ],\n  \"rank\": [\n    \"0\"\n  ],\n  \"type_id\": [\n    \"simple\"\n  ],\n  \"thumbnail_url\": [\n    \"//d1xazp9bcsa2he.cloudfront.net/media/catalog/product/cache/99965fb1f19ee2c6864a9ec374f18271/2/9/29a-024.jpg\"\n  ],\n  \"image_url\": [\n    \"//d1xazp9bcsa2he.cloudfront.net/media/catalog/product/cache/ed14777139260405661e267d6beb4a9b/2/9/29a-024.jpg\"\n  ],\n  \"category\": [\n    \"596\",\n    \"1\",\n    \"2\",\n    \"54\",\n    \"2640\"\n  ],\n  \"url\": [\n    \"chronos-29a-023-replacement-blade-fits-29a-014-14-tomato-slicer-p29a-023.html\"\n  ],\n  \"price_regular\": [\n    18.99\n  ],\n  \"price_final\": [\n    18.99\n  ],\n  \"price_regular_include_tax\": [\n    18.99\n  ],\n  \"price_final_include_tax\": [\n    18.99\n  ],\n  \"price_regular_formatted\": [\n    \"$18.99\"\n  ],\n  \"price_final_formatted\": [\n    \"$18.99\"\n  ],\n  \"price_regular_include_tax_formatted\": [\n    \"$18.99\"\n  ],\n  \"price_final_include_tax_formatted\": [\n    \"$18.99\"\n  ]\n}\n       ]",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "https://indexingapi-na.hawksearch.com/api/v2/indexing/index-items"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Item",
+					"_postman_id": "a9d21f00-5923-43c8-994f-86be5b8b038a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"IndexName\": \"roccommerce8alt.20200424.183357.test\",\n  \"Id\": \"string\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/delete"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Items",
+					"_postman_id": "8af34812-5442-4b7d-9ad4-88ff3e4f2b64",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"IndexName\": \"magentoelastic.20201125.105456\",\n    \"Ids\": [\"2\",\"5\"]\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/delete-items"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "b3898546-a3ee-4b3c-9388-c93971c507b2"
+		},
+		{
+			"name": "Hierarchy",
+			"item": [
+				{
+					"name": "Upsert Hierarchy",
+					"_postman_id": "8a5d2d87-bab3-4598-a4f2-85d712d8c809",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"IndexName\": \"magentoelastic.20210203.170655\",\n  \"Hierarchies\": [\n    {\n      \"HierarchyId\": \"2\",\n      \"Name\": \"category\",\n      \"ParentHierarchyId\": \"0\",\n      \"IsActive\": true,\n      \"SortOrder\": 0,\n      \"Url\": \"\",\n      \"ImageUrl\": \"\",\n      \"Custom\": \"\"\n    },\n    {\n      \"HierarchyId\": \"20\",\n      \"Name\": \"Women\",\n      \"ParentHierarchyId\": \"2\",\n      \"IsActive\": true,\n      \"SortOrder\": 0,\n      \"Url\": \"\",\n      \"ImageUrl\": \"\",\n      \"Custom\": \"\"\n    },\n    {\n      \"HierarchyId\": \"21\",\n      \"Name\": \"Tops\",\n      \"ParentHierarchyId\": \"20\",\n      \"IsActive\": true,\n      \"SortOrder\": 0,\n      \"Url\": \"\",\n      \"ImageUrl\": \"\",\n      \"Custom\": \"\"\n    },\n    {\n      \"HierarchyId\": \"23\",\n      \"Name\": \"Jackets\",\n      \"ParentHierarchyId\": \"21\",\n      \"IsActive\": true,\n      \"SortOrder\": 0,\n      \"Url\": \"\",\n      \"ImageUrl\": \"\",\n      \"Custom\": \"\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_elastic_indexing_api_url_dev}}api/hierarchy/upsert",
+						"description": "The Upsert method is used to insert hierarchy records.  The hierarchy records are often categories or departments. There is a limit of 125 hierarchy objects that can be sent in a request.  This method can be called multiple times to accommodate more than 125.  After all hierarchy objects have been sent, the hierarchy/rebuild method can be used."
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Hierarchy",
+					"_postman_id": "52cbda32-bd27-48a8-b48d-8ea1210ce07f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"IndexName\": \"{{current_index_name}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hawk_elastic_indexing_api_url_dev}}api/hierarchy",
+							"host": [
+								"{{hawk_elastic_indexing_api_url_dev}}api"
+							],
+							"path": [
+								"hierarchy"
+							],
+							"query": [
+								{
+									"key": "IndexName",
+									"value": "magentoelastic.20210202.121852",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"description": "This method can be used to verify the hierarchy that has been created. For internal use only"
+					},
+					"response": []
+				},
+				{
+					"name": "Remove all Hierarchy Documents",
+					"_postman_id": "31c51b6a-10b2-4f32-be72-4735c8e7f64c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"IndexName\": \"magentoelastic.20210202.121852\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{indexing_api_url}}api/hierarchy/delete-all",
+							"host": [
+								"{{indexing_api_url}}api"
+							],
+							"path": [
+								"hierarchy",
+								"delete-all"
+							],
+							"query": [
+								{
+									"key": "IndexName",
+									"type": "text",
+									"value": "magentoelastic.20210202.121852",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Remove all documents"
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Hierarchy Documents",
+					"_postman_id": "491dcfdd-cf0d-4070-9cd8-d074966f75d6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"IndexName\": \"magentoelastic.20210202.121852\",\n  \"Ids\": [\n    \"21\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{indexing_api_url}}api/hierarchy/delete-items",
+							"host": [
+								"{{indexing_api_url}}api"
+							],
+							"path": [
+								"hierarchy",
+								"delete-items"
+							],
+							"query": [
+								{
+									"key": "IndexName",
+									"type": "text",
+									"value": "magentoelastic.20210202.121852",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Removes multiple documents from a specific hierarchy based on ids"
+					},
+					"response": []
+				},
+				{
+					"name": "Rebuild Hierarchy",
+					"_postman_id": "97341394-87f3-4569-9fda-7b39bfbfe1f7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"IndexName\": \"magentoelastic.20210202.121852\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{indexing_api_url}}api/hierarchy/rebuild",
+						"description": "Rebuild index hierarchy"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "6e3b68c4-de96-43f4-9d06-950fb955b6a8"
+		},
+		{
+			"name": "Search",
+			"item": [
+				{
+					"name": "Search: Current index",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "e006886c-1221-4de0-b17b-eab194ab9f10",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "2d29c962-0331-43cf-b694-b3357352affa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"Keyword\": \"Impulse\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{hawk_elastic_search_api_url_dev}}api/v2/search"
+					},
+					"response": []
+				},
+				{
+					"name": "Landing Page: Current index",
+					"_postman_id": "8151779b-963e-4847-8def-2355b85d08c1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"CustomUrl\": \"gear/bags.html\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{hawk_elastic_search_api_url_dev}}api/v2/search"
+					},
+					"response": []
+				},
+				{
+					"name": "Search: By index name",
+					"_postman_id": "9b30e04f-a8a4-478f-ac95-9128132a4562",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"magentoelastic.20220516.174850\",\n  \"PageNo\": 1,\n  \"Keyword\": \"Ajax Full-Zip\"\n\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{hawk_elastic_search_api_url_dev}}api/v2/search"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "03b87b9e-3395-48a0-ae3e-30dc5ecb7233"
+		},
+		{
+			"name": "Autocomplete",
+			"item": [
+				{
+					"name": "Autocomplete search: Current index Copy",
+					"_postman_id": "bfd157a1-8e2d-4d66-8fdb-a80cee6f4659",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"Keyword\": \"Bag\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{hawk_elastic_search_api_url_dev}}api/v2/autocomplete"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "75a7de6d-8a13-4533-8510-43fca2a1f7ca"
+		},
+		{
+			"name": "Init New Engine (Magento)",
+			"item": [
+				{
+					"name": "Add __uid Field",
+					"_postman_id": "fc37fe9a-efde-4b67-96f0-bd0596a9ea82",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"UID\",\n        \"Name\": \"__uid\",\n        \"IsPrimaryKey\": true,\n        \"Type\": \"String\",\n        \"FieldType\": \"keyword\",\n        \"Boost\": 1,\n        \"IsOutput\": true,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add __type Field",
+					"_postman_id": "68f29567-1c1f-410f-b9d4-aef89c9c1c5b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"Doc Type\",\n        \"Name\": \"__type\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"String\",\n        \"FieldType\": \"keyword\",\n        \"Boost\": 1,\n        \"IsOutput\": false,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add category Field",
+					"_postman_id": "944fe367-5d6b-4d49-ab4c-a448fc4e82e5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"Category\",\n        \"Name\": \"category\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"String\",\n        \"FieldType\": \"facet\",\n        \"Boost\": 1,\n        \"IsOutput\": false,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false,\n        \"IsHierarchical\": true\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add name Field",
+					"_postman_id": "05b0656f-8937-439c-8850-45be258aec5a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"Name\",\n        \"Name\": \"name\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"String\",\n        \"FieldType\": \"keyword\",\n        \"Boost\": 1,\n        \"IsOutput\": true,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": true,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false,\n        \"PreviewMapping\": \"Title\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add url Field",
+					"_postman_id": "1d76673c-f86f-4ef8-ab8d-0d7689ecfca6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"URL\",\n        \"Name\": \"url\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"String\",\n        \"FieldType\": \"keyword\",\n        \"Boost\": 1,\n        \"IsOutput\": true,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false,\n        \"PreviewMapping\": \"ItemUrl\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add image_url Field",
+					"_postman_id": "5e2c3703-3006-4644-b3d9-e8892cd64c11",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"Image URL\",\n        \"Name\": \"image_url\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"String\",\n        \"FieldType\": \"keyword\",\n        \"Boost\": 1,\n        \"IsOutput\": true,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add thumbnail_url Field",
+					"_postman_id": "55750037-57e6-4637-abd5-1875aa915c1a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"Thumbnail URL\",\n        \"Name\": \"thumbnail_url\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"String\",\n        \"FieldType\": \"keyword\",\n        \"Boost\": 1,\n        \"IsOutput\": true,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add type_id Field",
+					"_postman_id": "c1153fd6-ac0b-4c80-beb9-26cdd5d4b861",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"type_id\",\n        \"Name\": \"type_id\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"String\",\n        \"FieldType\": \"keyword\",\n        \"Boost\": 1,\n        \"IsOutput\": true,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add visibility Field",
+					"_postman_id": "2a611175-6465-4bb9-9c89-8d20403f745b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"Visibility\",\n        \"Name\": \"visibility\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"String\",\n        \"FieldType\": \"keyword\",\n        \"Boost\": 1,\n        \"IsOutput\": true,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": false,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add price_regular Field",
+					"_postman_id": "c2a67aaa-47eb-4221-bbc4-49407a233ced",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"price_regular\",\n        \"Name\": \"price_regular\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"Single\",\n        \"FieldType\": \"facet\",\n        \"Boost\": 1,\n        \"IsOutput\": true,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add price_final Field",
+					"_postman_id": "43eeacec-f6b7-4b73-8175-db055c4bcc41",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"price_final\",\n        \"Name\": \"price_final\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"Single\",\n        \"FieldType\": \"facet\",\n        \"Boost\": 1,\n        \"IsOutput\": true,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add price_regular_include_tax Field",
+					"_postman_id": "f56ff023-2430-4abd-9c27-a407d5befc55",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"price_regular_include_tax\",\n        \"Name\": \"price_regular_include_tax\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"Single\",\n        \"FieldType\": \"facet\",\n        \"Boost\": 1,\n        \"IsOutput\": true,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add price_final_include_tax Field",
+					"_postman_id": "7d726d03-d1ff-4153-a27c-1a1ae1490f6d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"price_final_include_tax\",\n        \"Name\": \"price_final_include_tax\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"Single\",\n        \"FieldType\": \"facet\",\n        \"Boost\": 1,\n        \"IsOutput\": true,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add price_regular_formatted Field",
+					"_postman_id": "17824951-0e0b-4e44-8805-9cd88ceee3a3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"price_regular_formatted\",\n        \"Name\": \"price_regular_formatted\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"String\",\n        \"FieldType\": \"keyword\",\n        \"Boost\": 1,\n        \"IsOutput\": true,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add price_final_formatted Field",
+					"_postman_id": "1d1f9bf8-c104-411f-9d82-d78ddf050779",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"price_final_formatted\",\n        \"Name\": \"price_final_formatted\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"String\",\n        \"FieldType\": \"keyword\",\n        \"Boost\": 1,\n        \"IsOutput\": true,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add price_regular_include_tax_formatted Field",
+					"_postman_id": "a4ea2960-af24-4121-b5f0-c6abecd6eee4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"price_regular_include_tax_formatted\",\n        \"Name\": \"price_regular_include_tax_formatted\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"String\",\n        \"FieldType\": \"keyword\",\n        \"Boost\": 1,\n        \"IsOutput\": true,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				},
+				{
+					"name": "Add price_final_include_tax_formatted Field",
+					"_postman_id": "4e93e6ad-6593-4e0b-a61a-3e8d0a857d39",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"Label\": \"price_final_include_tax_formatted\",\n        \"Name\": \"price_final_include_tax_formatted\",\n        \"IsPrimaryKey\": false,\n        \"Type\": \"String\",\n        \"FieldType\": \"keyword\",\n        \"Boost\": 1,\n        \"IsOutput\": true,\n        \"IsShingle\": false,\n        \"IsBestFragment\": false,\n        \"IsDictionary\": false,\n        \"IsSort\": false,\n        \"IsPrefix\": false,\n        \"IsHidden\": false,\n        \"IsCompare\": false,\n        \"IsKeywordText\": true,\n        \"IsQuery\": false,\n        \"IsQueryText\": false,\n        \"SkipCustom\": false,\n        \"StripHtml\": false    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{hawk_rest_api_url_dev}}Field"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "8120a26d-3521-4297-aaae-11511c6f543e"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0e77753b-fe56-4975-9281-4d08ba973683",
+				"type": "text/javascript",
+				"exec": [
+					"const myVar = null;",
+					"",
+					"pm.globals.get(\"hawkMode\");",
+					"pm.collectionVariables.get(\"variable_key\");",
+					"pm.variables.get(\"variable_key\");",
+					"pm.globals.set(\"test_output\", \"variable_value\");",
+					"",
+					"",
+					"console.log(myVar);"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b0d4c515-fbb0-4367-b7ef-e1c908ca19cf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "d520b6d4-37d8-4533-ba1e-dfe6f1be6917",
+			"key": "hawkMode",
+			"value": "dev",
+			"type": "string"
+		}
+	]
+}
