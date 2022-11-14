@@ -1284,26 +1284,28 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "6e501b8f-65e8-469b-8841-c32a98af984b",
+				"id": "b580b762-e60f-404c-b838-f2287aca38a8",
 				"type": "text/javascript",
 				"exec": [
 					"const myVar = null;",
 					"",
-					"myVar = pm.environment.get(\"hawkMode\");",
-					"console.log(myVar);",
 					"myVar = pm.globals.get(\"hawkMode\");",
 					"console.log(myVar);",
+					"myVar = pm.collectionVariables.get(\"hawkMode\");",
+					"console.log(myVar);",
+					"myVar = pm.environment.get(\"hawkMode\");",
+					"console.log(myVar);",
+					"pm.variables.set(\"hawkMode\", \"devLocal\");",
 					"myVar = pm.variables.get(\"hawkMode\");",
 					"console.log(myVar);",
-					"myVar = pm.collectionVariables.get(\"hawkMode\");",
-					"console.log(myVar);"
+					""
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "d39504e3-f876-4ddf-a496-aa9e7a7efd9d",
+				"id": "87ae976c-7963-4f4f-9afa-9b44fbfbfe0d",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1313,7 +1315,7 @@
 	],
 	"variable": [
 		{
-			"id": "9e85cd07-ec8d-4805-b6f0-4110bd246f88",
+			"id": "895c0863-e6b9-4508-9778-ccddd23cfb57",
 			"key": "hawkMode",
 			"value": "devCollection",
 			"type": "string"
