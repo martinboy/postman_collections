@@ -28,7 +28,10 @@
 									"const jsonData = pm.response.json();",
 									"let nonCurrentIndex;",
 									"for (let i = 0; i < jsonData.IndexNames.length; i++) {",
-									"    ",
+									"    if (jsonData.IndexNames[i] === pm.variables.get(\"current_index_name\")) {",
+									"        continue;",
+									"        pm.variables.set(\"index_name\", jsonData.IndexNames[i]);",
+									"    }",
 									"}",
 									"",
 									""
@@ -1381,7 +1384,7 @@
 	],
 	"variable": [
 		{
-			"id": "16b0ada9-6b95-473f-a128-bd7f08553883",
+			"id": "a7a2a8f3-468d-4bbe-8855-8065bf912036",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
