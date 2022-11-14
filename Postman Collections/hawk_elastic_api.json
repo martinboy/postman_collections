@@ -70,8 +70,8 @@
 									"",
 									"pm.test(\"Index test\", function () {",
 									"    pm.response.to.have.status(200);",
-									"    const jsonData = pm.response.json();",
 									"    ",
+									"    const jsonData = pm.response.json();",
 									"    pm.expect(jsonData).to.be.an(\"object\");",
 									"    pm.expect(jsonData.IndexName).to.be.a(\"string\");",
 									"});",
@@ -1359,7 +1359,7 @@
 	],
 	"variable": [
 		{
-			"id": "70f20981-c874-4fcf-a7fc-7d163777f017",
+			"id": "b460850d-1772-47ae-9fa6-896a3f510c5e",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
