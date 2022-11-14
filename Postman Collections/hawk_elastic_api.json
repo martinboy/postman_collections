@@ -101,7 +101,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"url": "https://indexingapi-na.hawksearch.com/api/v2/indexing/current"
+						"url": "{{indexing_api_url}}api/v2/indexing/current"
 					},
 					"response": []
 				},
@@ -1345,7 +1345,7 @@
 	],
 	"variable": [
 		{
-			"id": "42873442-e7f2-4c88-84e4-5696e0d3eeaa",
+			"id": "4b24887d-1be0-41f1-942f-26ca4e52ad5f",
 			"key": "hawkMode",
 			"value": "prod",
 			"type": "string"
