@@ -31,7 +31,7 @@
 									"    if (jsonData.IndexNames[i] === pm.variables.get(\"current_index_name\")) {",
 									"        continue;",
 									"    }",
-									"    pm.variables.set(\"index_name\", jsonData.IndexNames[i]);",
+									"    pm.environment.set(\"index_name\", jsonData.IndexNames[i]);",
 									"}",
 									"",
 									""
@@ -1384,7 +1384,7 @@
 	],
 	"variable": [
 		{
-			"id": "d01080d4-a2ab-40d5-993d-af5cfad4598c",
+			"id": "45880794-996c-49c9-a51f-fe788c736924",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
