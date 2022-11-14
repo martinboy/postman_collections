@@ -67,11 +67,13 @@
 							"script": {
 								"id": "78cdaa1a-9792-4f13-9b30-827c295291b9",
 								"exec": [
-									"pm.test(\"Index test\", function () {",
-									"    pm.response.to.have.status(200);",
-									"    //pm.response.to.have.status(200);",
-									"});",
-									"console.log('result');",
+									"const jsonData = pm.response.json();",
+									"// pm.test(\"Index test\", function () {",
+									"//     pm.response.to.have.status(200);",
+									"//     pm.expect(jsonData).to.be.an(\"object\");",
+									"//     pm.expect(jsonData.IndexName).to.be.a(\"string\");",
+									"// });",
+									"//console.log(jsonData.IndexName);",
 									"//var jsonData = JSON.parse(pm.response);",
 									"//console.log(jsonData)",
 									"",
@@ -1354,7 +1356,7 @@
 	],
 	"variable": [
 		{
-			"id": "61115781-ed58-4e22-a853-32da0ef6ebf7",
+			"id": "c3134441-3282-4e12-af4f-d6ba9e9af88a",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
