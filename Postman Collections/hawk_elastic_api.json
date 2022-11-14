@@ -143,7 +143,7 @@
 							"mode": "raw",
 							"raw": "{\n  \n}"
 						},
-						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/create"
+						"url": "{{indexing_api_url}}api/v2/indexing/create"
 					},
 					"response": []
 				},
@@ -1354,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "3e443a4e-d760-40d6-916d-1bfe0e8dc209",
+			"id": "355f2236-32ed-4357-b76e-7bc8a0649cf3",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
