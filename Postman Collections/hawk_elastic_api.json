@@ -73,7 +73,8 @@
 									"    ",
 									"    const jsonData = pm.response.json();",
 									"    pm.expect(jsonData).to.be.an(\"object\");",
-									"    pm.expect(jsonData.IndexName2).to.be.a(\"string\");",
+									"    pm.expect(jsonData.IndexName).to.be.a(\"string\");",
+									"    pm.expect(jsonData.IndexName).to.be.not.undefined;",
 									"});",
 									"//console.log(jsonData);",
 									"//console.log(pm.response.json());",
@@ -1359,7 +1360,7 @@
 	],
 	"variable": [
 		{
-			"id": "d08cb645-7d73-4340-b5cd-02bb461e69e9",
+			"id": "276052a3-5eae-4d8f-8ebd-4b6d62ac8bbf",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
