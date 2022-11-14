@@ -837,7 +837,7 @@
 								}
 							}
 						},
-						"url": "{{hawk_rest_api_url_dev}}Field"
+						"url": "{{dashboard_api_url}}Field"
 					},
 					"response": []
 				},
@@ -870,7 +870,7 @@
 								}
 							}
 						},
-						"url": "{{hawk_rest_api_url_dev}}Field"
+						"url": "{{dashboard_api_url}}Field"
 					},
 					"response": []
 				},
@@ -1354,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "6b8c7c87-5ba3-4356-99db-4ab058a05b4a",
+			"id": "a4b07b91-0ed2-4d41-a670-f33f215ebdba",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
