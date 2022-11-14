@@ -375,7 +375,7 @@
 							"mode": "raw",
 							"raw": "{\n    \"IndexName\": \"magentoelastic.20201125.105456\",\n    \"Ids\": [\"2\",\"5\"]\n}"
 						},
-						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/delete-items"
+						"url": "{{indexing_api_url}}api/v2/indexing/delete-items"
 					},
 					"response": []
 				}
@@ -1354,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "9d83cc18-7c50-457f-8d90-3a04f3764d62",
+			"id": "f0e91fc4-c34c-49bd-9ab8-b0499ff0d166",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
