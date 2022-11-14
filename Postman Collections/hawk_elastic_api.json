@@ -74,7 +74,7 @@
 									"    const jsonData = pm.response.json();",
 									"    pm.expect(jsonData).to.be.an(\"object\");",
 									"    pm.expect(jsonData.IndexName).to.be.a(\"string\");",
-									"    pm.expect(jsonData.IndexName).to.be.not.undefined;",
+									"    pm.expect(jsonData.IndexName2).to.be.not.undefined;",
 									"});",
 									"//console.log(jsonData);",
 									"//console.log(pm.response.json());",
@@ -1360,7 +1360,7 @@
 	],
 	"variable": [
 		{
-			"id": "276052a3-5eae-4d8f-8ebd-4b6d62ac8bbf",
+			"id": "78d0d2a0-9fd4-4fbb-a1ae-66451c508077",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
