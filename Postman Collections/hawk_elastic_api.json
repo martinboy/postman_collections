@@ -627,7 +627,7 @@
 							"mode": "raw",
 							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"Keyword\": \"Impulse\"\n}"
 						},
-						"url": "{{hawk_elastic_search_api_url_dev}}api/v2/search"
+						"url": "{{search_api_url}}api/v2/search"
 					},
 					"response": []
 				},
@@ -1354,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "0583e73e-8e25-4440-bf50-e20b3f24a1a9",
+			"id": "6abe6963-f6af-4c9d-8e69-28403c4a279d",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
