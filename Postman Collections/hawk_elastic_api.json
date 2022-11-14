@@ -71,7 +71,7 @@
 									"//console.log(jsonData)",
 									"",
 									"jsonData = pm.response;",
-									"console.log(jsonData)",
+									"console.log(jsonData.id)",
 									"//pm.environment.set(\"current_index_name\", jsonData.IndexName);"
 								],
 								"type": "text/javascript"
@@ -1349,7 +1349,7 @@
 	],
 	"variable": [
 		{
-			"id": "d77a1fff-d0cc-49e9-8920-3e67c5abe3b9",
+			"id": "4fde0a17-bc49-4dbd-b179-e18e833a0ebb",
 			"key": "hawkMode",
 			"value": "prod",
 			"type": "string"
