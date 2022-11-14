@@ -664,9 +664,9 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"magentoelastic.20220516.174850\",\n  \"PageNo\": 1,\n  \"Keyword\": \"Ajax Full-Zip\"\n\n}"
+							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"centralrestaurantv2.20220929.080632\",\n  \"PageNo\": 1,\n  \"Keyword\": \"29A-023\"\n\n}"
 						},
-						"url": "{{hawk_elastic_search_api_url_dev}}api/v2/search"
+						"url": "https://essearchapi-na.hawksearch.com/api/v2/search"
 					},
 					"response": []
 				}
@@ -1312,7 +1312,7 @@
 	],
 	"variable": [
 		{
-			"id": "32c30cb8-e874-477b-9596-dc5da694334e",
+			"id": "57ba05c3-1317-4e86-9dce-0f60d0d34172",
 			"key": "hawkMode",
 			"value": "dev",
 			"type": "string"
