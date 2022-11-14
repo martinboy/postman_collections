@@ -37,7 +37,25 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/"
+						"url": {
+							"raw": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/",
+							"host": [
+								"{{hawk_elastic_indexing_api_url_dev}}api"
+							],
+							"path": [
+								"v2",
+								"indexing",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -1315,7 +1333,7 @@
 	],
 	"variable": [
 		{
-			"id": "25273af5-6569-40a7-80e7-a8ea33efdf03",
+			"id": "418b17b7-634d-4a03-a6bb-2017bfcb793b",
 			"key": "hawkMode",
 			"value": "devCollection",
 			"type": "string"
