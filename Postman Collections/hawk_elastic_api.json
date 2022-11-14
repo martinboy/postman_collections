@@ -74,6 +74,7 @@
 									"//     pm.expect(jsonData.IndexName).to.be.a(\"string\");",
 									"// });",
 									"console.log(jsonData);",
+									"console.log(pm.response);",
 									"//var jsonData = JSON.parse(pm.response);",
 									"//console.log(jsonData)",
 									"",
@@ -1356,7 +1357,7 @@
 	],
 	"variable": [
 		{
-			"id": "b904871c-045a-4c4b-9122-2b173b2d780b",
+			"id": "7543ef2a-9558-4767-b967-2b09fe45e1e2",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
