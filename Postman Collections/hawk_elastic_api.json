@@ -309,7 +309,7 @@
 								}
 							}
 						},
-						"url": "https://indexingapi-na.hawksearch.com/api/v2/indexing/index-items"
+						"url": "{{indexing_api_url}}api/v2/indexing/index-items"
 					},
 					"response": []
 				},
@@ -1354,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "08dbc38b-a8bb-4d23-bc95-113c55452523",
+			"id": "31f05b59-bdfa-4799-a38b-9af4b828f98a",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
