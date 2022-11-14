@@ -1302,7 +1302,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "7808f04a-5909-4551-9da1-75e487972e54",
+				"id": "c6ba17f1-e45b-4b4e-9b60-74675e13e60f",
 				"type": "text/javascript",
 				"exec": [
 					"var myVar = null;",
@@ -1323,6 +1323,8 @@
 					"        pm.variables.set(\"indexing_api_url\", pm.variables.get(\"indexing_api_url_dev\"));",
 					"        pm.variables.set(\"search_api_url\", pm.variables.get(\"search_api_url_dev\"));",
 					"}",
+					"",
+					"pm.variables.set(\"search_api_url2\", pm.variables.get(\"search_api_url_dev\"));",
 					"console.log(pm.variables.get(\"dashboard_api_url\"));",
 					"console.log(pm.variables.get(\"indexing_api_url\"));",
 					"console.log(pm.variables.get(\"search_api_url\"));",
@@ -1333,7 +1335,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "c7ae8103-6188-40e4-a642-b71ed148c8ba",
+				"id": "55520d68-f6dd-4971-89ad-2686413acf20",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1343,7 +1345,7 @@
 	],
 	"variable": [
 		{
-			"id": "02c7d4d3-15c6-40e3-8cfc-e67922b5b0d9",
+			"id": "710b895f-1ef5-40df-96c8-ef5c78865dfb",
 			"key": "hawkMode",
 			"value": "devCollection",
 			"type": "string",
