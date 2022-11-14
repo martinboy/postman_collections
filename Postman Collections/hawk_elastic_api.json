@@ -67,8 +67,8 @@
 							"script": {
 								"id": "78cdaa1a-9792-4f13-9b30-827c295291b9",
 								"exec": [
-									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"current_index_name\", jsonData.IndexName);"
+									"var jsonData = JSON.parse(pm.response);",
+									"pm.environment.set(\"current_index_name\", jsonData.IndexName);"
 								],
 								"type": "text/javascript"
 							}
@@ -1345,7 +1345,7 @@
 	],
 	"variable": [
 		{
-			"id": "4b24887d-1be0-41f1-942f-26ca4e52ad5f",
+			"id": "4dbe52c0-b124-4311-8cc9-fd3429c28871",
 			"key": "hawkMode",
 			"value": "prod",
 			"type": "string"
