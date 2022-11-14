@@ -242,7 +242,7 @@
 							"mode": "raw",
 							"raw": "{\n    \"IndexName\": \"magentoelastic.20210201.134824\"\n}"
 						},
-						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/clone"
+						"url": "{{indexing_api_url}}api/v2/indexing/clone"
 					},
 					"response": []
 				},
@@ -1354,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "4d164e9b-e022-4a3e-a407-5e0bed14df55",
+			"id": "89db4a2e-cf8f-4087-896f-b2a26b072366",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
