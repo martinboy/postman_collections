@@ -1311,12 +1311,12 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "17328a53-24a0-4ae9-bd53-c74a21cbd9cf",
+				"id": "860f289e-1dab-4df6-bdd0-3cec5dbb2064",
 				"type": "text/javascript",
 				"exec": [
 					"var myVar = null;",
 					"",
-					"switch (pm.variables.get(\"hawkMode\")) {",
+					"switch (pm.variables.get(\"env\")) {",
 					"    case \"prod\":",
 					"        pm.variables.set(\"dashboard_api_url\", pm.variables.get(\"dashboard_api_url_prod\"));",
 					"        pm.variables.set(\"indexing_api_url\", pm.variables.get(\"indexing_api_url_prod\"));",
@@ -1333,7 +1333,7 @@
 					"        pm.variables.set(\"search_api_url\", pm.variables.get(\"search_api_url_dev\"));",
 					"}",
 					"",
-					"console.log(\"Environment: \" + pm.variables.get(\"hawkMode\"));",
+					"console.log(\"Environment: \" + pm.variables.get(\"env\"));",
 					"console.log(pm.variables.get(\"dashboard_api_url\"));",
 					"console.log(pm.variables.get(\"indexing_api_url\"));",
 					"console.log(pm.variables.get(\"search_api_url\"));",
@@ -1344,7 +1344,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "3e20d361-5fe2-43a4-b81d-fc80316edae4",
+				"id": "7b45da71-40a3-4cca-82a7-adb92241b7e0",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1354,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "4f17a512-24b4-4816-b880-dd068e809403",
+			"id": "b712060f-642f-407e-915c-8eda6f2d5749",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
