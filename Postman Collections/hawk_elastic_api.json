@@ -75,7 +75,7 @@
 									"    //testResult = pm.expect(jsonData).to.be.an(\"object\") || testResult;",
 									"    //testResult = pm.expect(jsonData.IndexName).to.be.a(\"string\") || testResult;",
 									"});",
-									"//console.log(testResult);",
+									"console.log(testResult);",
 									"//console.log(pm.response.json());",
 									"//var jsonData = JSON.parse(pm.response);",
 									"//console.log(jsonData)",
@@ -1359,7 +1359,7 @@
 	],
 	"variable": [
 		{
-			"id": "ec7c6417-e2c4-4b7e-a38d-df7756917ae4",
+			"id": "7373b520-77d9-4f9a-95e1-95a53280fed7",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
