@@ -71,7 +71,7 @@
 									"    pm.response.to.have.status(200);",
 									"    //pm.response.to.have.status(200);",
 									"});",
-									"",
+									"console.log('result');",
 									"//var jsonData = JSON.parse(pm.response);",
 									"//console.log(jsonData)",
 									"",
@@ -1354,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "cd63c326-e3c7-4811-941d-f4b6cfd6cdfc",
+			"id": "1485da5a-4555-4824-8773-cd4313223682",
 			"key": "hawkMode",
 			"value": "prod",
 			"type": "string"
