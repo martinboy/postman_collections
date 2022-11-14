@@ -1284,7 +1284,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "5df172db-5f2e-4a41-845f-98dd07afc9ba",
+				"id": "053fd8d3-172a-49a3-85f3-061ae79d1cc7",
 				"type": "text/javascript",
 				"exec": [
 					"const myVar = null;",
@@ -1303,7 +1303,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "673d6b5f-136f-441d-b248-1d75a1799261",
+				"id": "57adcef5-8bfe-41fd-8fa7-83b87ebe398f",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1313,9 +1313,9 @@
 	],
 	"variable": [
 		{
-			"id": "fc90177a-89e3-45fc-8634-f7511a9c7f8c",
+			"id": "354cacd0-48b4-4bfb-9a2b-40521812d907",
 			"key": "hawkMode",
-			"value": "dev",
+			"value": "devCollection",
 			"type": "string"
 		}
 	]
