@@ -693,7 +693,7 @@
 							"mode": "raw",
 							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"centralrestaurantv2.20220929.080632\",\n  \"PageNo\": 1,\n  \"Keyword\": \"29A-023\"\n\n}"
 						},
-						"url": "https://essearchapi-na.hawksearch.com/api/v2/search"
+						"url": "{{search_api_url}}api/v2/search"
 					},
 					"response": []
 				}
@@ -1354,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "3dfd9be5-e2ea-452c-82f5-746f0f0dd155",
+			"id": "1ceb7d56-fd48-4adf-a125-87cd4243b8c3",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
