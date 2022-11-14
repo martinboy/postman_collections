@@ -176,7 +176,7 @@
 							"mode": "raw",
 							"raw": "{\r\n    \"IndexName\": \"magentoelastic.20200904.071842.ggg\"\r\n}"
 						},
-						"url": "{{hawk_elastic_indexing_api_url_dev}}api/v2/indexing/set-current"
+						"url": "{{indexing_api_url}}api/v2/indexing/set-current"
 					},
 					"response": []
 				},
@@ -1354,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "355f2236-32ed-4357-b76e-7bc8a0649cf3",
+			"id": "b8167abf-5d48-4a29-ba99-27d084cdc8f0",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
