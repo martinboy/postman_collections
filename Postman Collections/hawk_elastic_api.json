@@ -67,7 +67,10 @@
 							"script": {
 								"id": "78cdaa1a-9792-4f13-9b30-827c295291b9",
 								"exec": [
-									"var jsonData = JSON.parse(pm.response);",
+									"//var jsonData = JSON.parse(pm.response);",
+									"//console.log(jsonData)",
+									"",
+									"jsonData = pm.response;",
 									"console.log(jsonData)",
 									"//pm.environment.set(\"current_index_name\", jsonData.IndexName);"
 								],
@@ -1346,7 +1349,7 @@
 	],
 	"variable": [
 		{
-			"id": "de74e0bd-9302-4670-af36-a8a3e1b1fe09",
+			"id": "d77a1fff-d0cc-49e9-8920-3e67c5abe3b9",
 			"key": "hawkMode",
 			"value": "prod",
 			"type": "string"
