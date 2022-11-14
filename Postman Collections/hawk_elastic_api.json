@@ -660,7 +660,7 @@
 							"mode": "raw",
 							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"CustomUrl\": \"gear/bags.html\"\n}"
 						},
-						"url": "{{hawk_elastic_search_api_url_dev}}api/v2/search"
+						"url": "{{search_api_url}}api/v2/search"
 					},
 					"response": []
 				},
@@ -1354,7 +1354,7 @@
 	],
 	"variable": [
 		{
-			"id": "6abe6963-f6af-4c9d-8e69-28403c4a279d",
+			"id": "3dfd9be5-e2ea-452c-82f5-746f0f0dd155",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
