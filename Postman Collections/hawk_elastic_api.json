@@ -461,7 +461,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"IndexName\": \"{{current_index_name}}\"\n}",
+							"raw": "{\n  \"IndexName\": \"{{index_name}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1384,7 +1384,7 @@
 	],
 	"variable": [
 		{
-			"id": "118e3160-acc1-4a51-b19b-cf432d3d4bd4",
+			"id": "4789c980-508c-43c2-8246-733c44b46cd6",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
