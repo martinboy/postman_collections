@@ -432,7 +432,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"IndexName\": \"magentoelastic.20210203.170655\",\n  \"Hierarchies\": [\n    {\n      \"HierarchyId\": \"2\",\n      \"Name\": \"category\",\n      \"ParentHierarchyId\": \"0\",\n      \"IsActive\": true,\n      \"SortOrder\": 0,\n      \"Url\": \"\",\n      \"ImageUrl\": \"\",\n      \"Custom\": \"\"\n    },\n    {\n      \"HierarchyId\": \"20\",\n      \"Name\": \"Women\",\n      \"ParentHierarchyId\": \"2\",\n      \"IsActive\": true,\n      \"SortOrder\": 0,\n      \"Url\": \"\",\n      \"ImageUrl\": \"\",\n      \"Custom\": \"\"\n    },\n    {\n      \"HierarchyId\": \"21\",\n      \"Name\": \"Tops\",\n      \"ParentHierarchyId\": \"20\",\n      \"IsActive\": true,\n      \"SortOrder\": 0,\n      \"Url\": \"\",\n      \"ImageUrl\": \"\",\n      \"Custom\": \"\"\n    },\n    {\n      \"HierarchyId\": \"23\",\n      \"Name\": \"Jackets\",\n      \"ParentHierarchyId\": \"21\",\n      \"IsActive\": true,\n      \"SortOrder\": 0,\n      \"Url\": \"\",\n      \"ImageUrl\": \"\",\n      \"Custom\": \"\"\n    }\n  ]\n}",
+							"raw": "{\n  \"IndexName\": \"{{index_name}}\",\n  \"Hierarchies\": [\n    {\n      \"HierarchyId\": \"2\",\n      \"Name\": \"category\",\n      \"ParentHierarchyId\": \"0\",\n      \"IsActive\": true,\n      \"SortOrder\": 0,\n      \"Url\": \"\",\n      \"ImageUrl\": \"\",\n      \"Custom\": \"\"\n    },\n    {\n      \"HierarchyId\": \"54\",\n      \"Name\": \"Women\",\n      \"ParentHierarchyId\": \"2\",\n      \"IsActive\": true,\n      \"SortOrder\": 0,\n      \"Url\": \"\",\n      \"ImageUrl\": \"\",\n      \"Custom\": \"\"\n    },\n    {\n      \"HierarchyId\": \"21\",\n      \"Name\": \"Tops\",\n      \"ParentHierarchyId\": \"20\",\n      \"IsActive\": true,\n      \"SortOrder\": 0,\n      \"Url\": \"\",\n      \"ImageUrl\": \"\",\n      \"Custom\": \"\"\n    },\n    {\n      \"HierarchyId\": \"23\",\n      \"Name\": \"Jackets\",\n      \"ParentHierarchyId\": \"21\",\n      \"IsActive\": true,\n      \"SortOrder\": 0,\n      \"Url\": \"\",\n      \"ImageUrl\": \"\",\n      \"Custom\": \"\"\n    }\n  ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1384,7 +1384,7 @@
 	],
 	"variable": [
 		{
-			"id": "758e5b18-fe73-41be-81e6-5f570adf3d88",
+			"id": "118e3160-acc1-4a51-b19b-cf432d3d4bd4",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
