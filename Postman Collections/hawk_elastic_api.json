@@ -598,7 +598,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"IndexName\": \"magentoelastic.20210202.121852\"\n}",
+							"raw": "{\n  \"IndexName\": \"{{index_name}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1384,7 +1384,7 @@
 	],
 	"variable": [
 		{
-			"id": "4789c980-508c-43c2-8246-733c44b46cd6",
+			"id": "9ce8961b-794a-4ba3-862a-5afb0eb5203f",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
