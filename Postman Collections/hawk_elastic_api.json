@@ -204,7 +204,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"IndexName\": \"magentoelastic.20200904.071842.ggg\"\r\n}"
+							"raw": "{\r\n    \"IndexName\": \"centralrestaurantv2.20220929.080632\"\r\n}"
 						},
 						"url": "{{indexing_api_url}}api/v2/indexing/set-current"
 					},
@@ -1384,7 +1384,7 @@
 	],
 	"variable": [
 		{
-			"id": "576e7834-dedc-4833-ab4e-c5fd0ead009b",
+			"id": "0517039f-afac-4117-bd6a-9a98460a6d10",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
