@@ -239,7 +239,7 @@
 							"mode": "raw",
 							"raw": "{\r\n    \"IndexName\": \"centralrestaurantv2.20220929.080632\"\r\n}"
 						},
-						"url": "{{indexing_api_url}}api/v2/indexing/set-current"
+						"url": "{{indexing_api_url}}api/v2/indexing/unset-current"
 					},
 					"response": []
 				},
@@ -1417,7 +1417,7 @@
 	],
 	"variable": [
 		{
-			"id": "82c8f858-0706-4e5d-b658-798e874ff419",
+			"id": "9e20e4d8-0320-4ee1-931b-67e103a6b8a5",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
