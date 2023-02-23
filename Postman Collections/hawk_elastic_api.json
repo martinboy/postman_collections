@@ -211,6 +211,39 @@
 					"response": []
 				},
 				{
+					"name": "Unset Current Index",
+					"id": "2a0669eb-e509-4a20-ab1e-be8793f5009b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"IndexName\": \"centralrestaurantv2.20220929.080632\"\r\n}"
+						},
+						"url": "{{indexing_api_url}}api/v2/indexing/set-current"
+					},
+					"response": []
+				},
+				{
 					"name": "Delete Index",
 					"id": "57ae9c2c-a703-4da0-9ae2-61970b32d691",
 					"protocolProfileBehavior": {
@@ -1384,7 +1417,7 @@
 	],
 	"variable": [
 		{
-			"id": "e313b75f-0127-4761-954a-0867dbd4ea5a",
+			"id": "82c8f858-0706-4e5d-b658-798e874ff419",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
