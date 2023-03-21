@@ -721,7 +721,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"CustomUrl\": \"gear/bags.html\"\n}"
+							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"CustomUrl\": \"/brands/columbia/\"\n}"
 						},
 						"url": "{{search_api_url}}api/v2/search"
 					},
@@ -1417,7 +1417,7 @@
 	],
 	"variable": [
 		{
-			"id": "9e20e4d8-0320-4ee1-931b-67e103a6b8a5",
+			"id": "ab6bc6a9-e3eb-460b-abb9-45138370e309",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
