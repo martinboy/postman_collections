@@ -688,7 +688,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"ClientGuid\": \"{{tracking_key}}\",\n    \"Keyword\": \"Impulse\"\n}"
+							"raw": "{\n    \"ClientGuid\": \"{{tracking_key}}\",\n    \"Keyword\": \"Sprite\"\n}"
 						},
 						"url": "{{search_api_url}}api/v2/search"
 					},
@@ -1417,7 +1417,7 @@
 	],
 	"variable": [
 		{
-			"id": "2cb0fc2d-ba03-470f-8bb3-04b8b5a8bcdf",
+			"id": "d2dbadb6-b6f8-4474-ab10-770d8572b400",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
