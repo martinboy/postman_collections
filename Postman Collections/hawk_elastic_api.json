@@ -365,7 +365,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"IndexName\": \"{{current_index_name}}\",\n  \"Items\": [\n    {\n      \"__uid\": [\n        \"product_53222_ii\"\n      ],\n      \"__type\": [\n        \"product\"\n      ],\n      \"name\": [\n        \"M+A Matting 280520310 Waterhog Fashion Dark Brown 3x10\"\n      ],\n      \"sku\": [\n        \"134-U89\"\n      ],\n      \"visibility\": [\n        \"Catalog, Search\"\n      ],\n      \"category\": [\n        \"439\",\n        \"1\",\n        \"2\",\n        \"58\",\n        \"401\"\n      ]\n    }\n  ]\n}",
+							"raw": "{\n  \"IndexName\": \"{{index_name}}\",\n  \"Items\": [\n    {\n      \"__uid\": [\n        \"product_53222_ii\"\n      ],\n      \"__type\": [\n        \"product\"\n      ],\n      \"name\": [\n        \"M+A Matting 280520310 Waterhog Fashion Dark Brown 3x10\"\n      ],\n      \"sku\": [\n        \"134-U89\"\n      ],\n      \"visibility\": [\n        \"Catalog, Search\"\n      ],\n      \"category\": [\n        \"439\",\n        \"1\",\n        \"2\",\n        \"58\",\n        \"401\"\n      ]\n    }\n  ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1417,7 +1417,7 @@
 	],
 	"variable": [
 		{
-			"id": "1bd0bfd5-9fc3-4029-9219-01b1a4174a7f",
+			"id": "d5cce7ad-ab4a-4ab6-b173-51263ecbb941",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
