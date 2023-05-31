@@ -365,7 +365,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"IndexName\": \"{{index_name}}\",\n  \"Items\": [\n    {\n      \"__uid\": [\n        \"product_53222_ii\"\n      ],\n      \"__type\": [\n        \"product\"\n      ],\n      \"name\": [\n        \"M+A Matting 280520310 Waterhog Fashion Dark Brown 3x10\"\n      ],\n      \"sku\": [\n        \"134-U89\"\n      ],\n      \"visibility\": [\n        \"Catalog, Search\"\n      ],\n      \"category\": [\n        \"439\",\n        \"1\",\n        \"2\",\n        \"58\",\n        \"401\"\n      ]\n    }\n  ]\n}",
+							"raw": "{\n    \"IndexName\": \"{{index_name}}\",\n    \"Items\": [\n        {\n            \"__uid\": [\n                \"product_51\"\n            ],\n            \"__type\": [\n                \"product\"\n            ],\n            \"name\": [\n                \"Set of Sprite Yoga Straps\"\n            ],\n            \"sku\": [\n                \"24-WG085_Group\"\n            ],\n            \"status\": [\n                \"Enabled\"\n            ],\n            \"visibility\": [\n                \"Catalog, Search\"\n            ],\n            \"category_gear\": [\n                \"Exercise\"\n            ],\n            \"activity\": [\n                \"Yoga\"\n            ],\n            \"color\": [],\n            \"size\": [],\n            \"thumbnail_url\": [\n                \"\\\\/\\\\/hawksearch-es-dev-m2.test\\\\/media\\\\/catalog\\\\/product\\\\/cache\\\\/d28153fc2f4c0f4bffbbcd7bb21ad700\\\\/l\\\\/u\\\\/luma-yoga-strap-set.jpg\"\n            ]\n        },\n        {\n            \"__uid\": [\n                \"product_35\"\n            ],\n            \"__type\": [\n                \"product\"\n            ],\n            \"name\": [\n                \"Sprite Yoga Strap 10 foot 35\"\n            ],\n            \"sku\": [\n                \"24-WG087\"\n            ],\n            \"status\": [\n                \"Enabled\"\n            ],\n            \"visibility\": [\n                \"Catalog, Search\"\n            ],\n            \"category_gear\": [\n                \"Cardio\"\n            ],\n            \"activity\": [\n                \"Yoga\"\n            ],\n            \"color\": [\n                \"black\"\n            ],\n            \"size\": [],\n            \"thumbnail_url\": [\n                \"\\\\/\\\\/hawksearch-es-dev-m2.test\\\\/media\\\\/catalog\\\\/product\\\\/cache\\\\/d28153fc2f4c0f4bffbbcd7bb21ad700\\\\/l\\\\/u\\\\/luma-yoga-strap.jpg\"\n            ]\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1417,7 +1417,7 @@
 	],
 	"variable": [
 		{
-			"id": "d5cce7ad-ab4a-4ab6-b173-51263ecbb941",
+			"id": "0e2e74b1-22a0-4099-8d89-61494af6de55",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
