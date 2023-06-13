@@ -270,7 +270,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"IndexName\": \"magentoelastic.20210201.134824\"\n}"
+							"raw": "{\n    \"IndexName\": \"{{index_name}}\"\n}"
 						},
 						"url": "{{indexing_api_url}}api/v2/indexing/delete-index"
 					},
@@ -1417,7 +1417,7 @@
 	],
 	"variable": [
 		{
-			"id": "d2dbadb6-b6f8-4474-ab10-770d8572b400",
+			"id": "f68aa711-b663-4fff-98fd-1af5e75c4b80",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
