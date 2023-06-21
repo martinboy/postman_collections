@@ -1398,7 +1398,14 @@
 							"});",
 							"",
 							"",
-							""
+							"const jsonData = pm.response.json();",
+							"let nonCurrentIndex;",
+							"for (let i = 0; i < jsonData.hits.hits.length; i++) {",
+							"    if (jsonData.IndexNames[i] === pm.variables.get(\"current_index_name\")) {",
+							"        continue;",
+							"    }",
+							"    pm.environment.set(\"index_name\", jsonData.IndexNames[i]);",
+							"}"
 						],
 						"type": "text/javascript"
 					}
@@ -1472,7 +1479,7 @@
 	],
 	"variable": [
 		{
-			"id": "54a2ac24-372d-4209-8b63-8f560467dce2",
+			"id": "1b96dd9a-b08a-4f7c-ab73-c4b4f704369f",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
