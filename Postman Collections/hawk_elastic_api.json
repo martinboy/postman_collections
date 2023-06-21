@@ -1368,6 +1368,28 @@
 				}
 			],
 			"id": "8120a26d-3521-4297-aaae-11511c6f543e"
+		},
+		{
+			"name": "Elastic Search Magento",
+			"id": "9ea669b8-74a8-4bc0-9042-eb4d77abee3a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"from\": 0,\n        \"size\": 12,\n        \"stored_fields\": \"_none_\",\n        \"explain\": true,\n        \"docvalue_fields\": [\n            \"_id\",\n            \"_score\"\n        ],\n        \"sort\": [\n            {\n                \"_score\": {\n                    \"order\": \"desc\"\n                }\n            }\n        ],\n        \"query\": {\n            \"bool\": {\n                \"must\": [\n                    {\n                        \"term\": {\n                            \"category_ids\": \"42\"\n                        }\n                    },\n                    {\n                        \"terms\": {\n                            \"visibility\": [\n                                \"3\",\n                                \"4\"\n                            ]\n                        }\n                    }\n                ],\n                \"should\": [\n                    {\n                        \"match\": {\n                            \"_search\": {\n                                \"query\": \"Straps\",\n                                \"boost\": 2\n                            }\n                        }\n                    },\n                    {\n                        \"match\": {\n                            \"name\": {\n                                \"query\": \"Straps\",\n                                \"boost\": 6\n                            }\n                        }\n                    },\n                    {\n                        \"match\": {\n                            \"sku\": {\n                                \"query\": \"Straps\",\n                                \"boost\": 7\n                            }\n                        }\n                    },\n                    {\n                        \"match\": {\n                            \"description\": {\n                                \"query\": \"Straps\",\n                                \"boost\": 2\n                            }\n                        }\n                    },\n                    {\n                        \"match\": {\n                            \"short_description\": {\n                                \"query\": \"Straps\",\n                                \"boost\": 2\n                            }\n                        }\n                    },\n                    {\n                        \"match\": {\n                            \"manufacturer_value\": {\n                                \"query\": \"Straps\",\n                                \"boost\": 2\n                            }\n                        }\n                    },\n                    {\n                        \"match\": {\n                            \"status_value\": {\n                                \"query\": \"Straps\",\n                                \"boost\": 2\n                            }\n                        }\n                    },\n                    {\n                        \"match\": {\n                            \"url_key\": {\n                                \"query\": \"Straps\",\n                                \"boost\": 2\n                            }\n                        }\n                    },\n                    {\n                        \"match\": {\n                            \"tax_class_id_value\": {\n                                \"query\": \"Straps\",\n                                \"boost\": 2\n                            }\n                        }\n                    },\n                    {\n                        \"match\": {\n                            \"_search\": {\n                                \"query\": \"Straps\",\n                                \"boost\": 2\n                            }\n                        }\n                    },\n                    {\n                        \"match_phrase_prefix\": {\n                            \"name\": {\n                                \"query\": \"Straps\",\n                                \"boost\": 2,\n                                \"analyzer\": \"prefix_search\"\n                            }\n                        }\n                    },\n                    {\n                        \"match_phrase_prefix\": {\n                            \"sku\": {\n                                \"query\": \"Straps\",\n                                \"boost\": 2,\n                                \"analyzer\": \"sku_prefix_search\"\n                            }\n                        }\n                    }\n                ],\n                \"must_not\": [\n                    {\n                        \"term\": {\n                            \"category_permission_1_0\": \"-2\"\n                        }\n                    }\n                ],\n                \"minimum_should_match\": 1\n            }\n        },\n        \"aggregations\": {\n            \"price_bucket\": {\n                \"extended_stats\": {\n                    \"field\": \"price_0_1\"\n                }\n            },\n            \"category_bucket\": {\n                \"terms\": {\n                    \"field\": \"category_ids\",\n                    \"size\": 500\n                }\n            }\n        }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "127.0.0.1:9200/magento2_product_1/_search"
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -1417,7 +1439,7 @@
 	],
 	"variable": [
 		{
-			"id": "56a9a906-d630-41f3-a933-737b0d52b888",
+			"id": "49b870ad-adba-4faa-b44e-e2795ebfcfa7",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
