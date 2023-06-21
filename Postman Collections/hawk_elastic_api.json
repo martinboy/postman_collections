@@ -1382,6 +1382,26 @@
 						],
 						"type": "text/javascript"
 					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "95feb6f9-a2a0-459f-a3aa-3a63f1819cdf",
+						"exec": [
+							"pm.test(\"Response to have hits\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    ",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.be.an(\"object\");",
+							"    pm.expect(jsonData.hits.hits).to.have.lengthOf.at.least(1);",
+							"    ",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
 				}
 			],
 			"id": "9ea669b8-74a8-4bc0-9042-eb4d77abee3a",
@@ -1452,7 +1472,7 @@
 	],
 	"variable": [
 		{
-			"id": "d76392d6-20fb-4a87-a4bf-b22352089f93",
+			"id": "54a2ac24-372d-4209-8b63-8f560467dce2",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
