@@ -1377,7 +1377,7 @@
 					"script": {
 						"id": "d0cb2324-c883-45a5-959a-4fd0f82a8d72",
 						"exec": [
-							"var query = \"Straps\";",
+							"var query = \"Strap\";",
 							"pm.variables.set(\"query\", query);"
 						],
 						"type": "text/javascript"
@@ -1482,7 +1482,7 @@
 	],
 	"variable": [
 		{
-			"id": "b75e09ca-e576-4589-ba87-5ea02e2cc0f2",
+			"id": "aaf844a8-aa17-4cc2-81f4-4894541fa92d",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
