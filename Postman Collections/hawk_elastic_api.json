@@ -1401,7 +1401,7 @@
 							"const jsonData = pm.response.json();",
 							"let ids = [];",
 							"for (let i = 0; i < jsonData.hits.hits.length; i++) {",
-							"    ids.push(jsonData.hits.hits[i].fields._id);",
+							"    ids = ids.concat(jsonData.hits.hits[i].fields._id);",
 							"}",
 							"",
 							"if (ids) {",
@@ -1482,7 +1482,7 @@
 	],
 	"variable": [
 		{
-			"id": "47f13e85-5cf9-4afe-9d0f-f89726217aa3",
+			"id": "b75e09ca-e576-4589-ba87-5ea02e2cc0f2",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
