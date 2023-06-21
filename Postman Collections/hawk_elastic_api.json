@@ -1371,6 +1371,18 @@
 		},
 		{
 			"name": "Elastic Search Magento",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d0cb2324-c883-45a5-959a-4fd0f82a8d72",
+						"exec": [
+							"var query = \"Straps\";"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "9ea669b8-74a8-4bc0-9042-eb4d77abee3a",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -1380,7 +1392,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"from\": 0,\n  \"size\": 1000,\n  \"stored_fields\": \"_none_\",\n  \"explain\" : true,\n  \"docvalue_fields\": [\n    \"_id\",\n    \"_score\"\n  ],\n  \"sort\": [\n    {\n      \"_score\": {\n        \"order\": \"desc\"\n      }\n    }\n  ],\n  \"query\": {\n    \"bool\": {\n      \"must\": [\n        {\n          \"term\": {\n            \"category_ids\": \"42\"\n          }\n        },\n        {\n          \"terms\": {\n            \"visibility\": [\n              \"3\",\n              \"4\"\n            ]\n          }\n        }\n      ],\n      \"should\": [\n        {\n          \"match\": {\n            \"_search\": {\n              \"query\": \"Straps\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"name\": {\n              \"query\": \"Straps\",\n              \"boost\": 6\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"sku\": {\n              \"query\": \"Straps\",\n              \"boost\": 7\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"manufacturer_value\": {\n              \"query\": \"Straps\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"status_value\": {\n              \"query\": \"Straps\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"url_key\": {\n              \"query\": \"Straps\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"tax_class_id_value\": {\n              \"query\": \"Straps\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"_search\": {\n              \"query\": \"Straps\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match_phrase_prefix\": {\n            \"name\": {\n              \"query\": \"Straps\",\n              \"boost\": 2,\n              \"analyzer\": \"prefix_search\"\n            }\n          }\n        },\n        {\n          \"match_phrase_prefix\": {\n            \"sku\": {\n              \"query\": \"Straps\",\n              \"boost\": 2,\n              \"analyzer\": \"sku_prefix_search\"\n            }\n          }\n        }\n      ],\n      \"must_not\": [\n        {\n          \"term\": {\n            \"category_permission_1_0\": \"-2\"\n          }\n        }\n      ],\n      \"minimum_should_match\": 1\n    }\n  },\n  \"aggregations\": {\n    \"price_bucket\": {\n      \"extended_stats\": {\n        \"field\": \"price_0_1\"\n      }\n    },\n    \"category_bucket\": {\n      \"terms\": {\n        \"field\": \"category_ids\",\n        \"size\": 500\n      }\n    }\n  }\n}",
+					"raw": "{\n  \"from\": 0,\n  \"size\": 1000,\n  \"stored_fields\": \"_none_\",\n  \"explain\" : true,\n  \"docvalue_fields\": [\n    \"_id\",\n    \"_score\"\n  ],\n  \"sort\": [\n    {\n      \"_score\": {\n        \"order\": \"desc\"\n      }\n    }\n  ],\n  \"query\": {\n    \"bool\": {\n      \"must\": [\n        {\n          \"term\": {\n            \"category_ids\": \"42\"\n          }\n        },\n        {\n          \"terms\": {\n            \"visibility\": [\n              \"3\",\n              \"4\"\n            ]\n          }\n        }\n      ],\n      \"should\": [\n        {\n          \"match\": {\n            \"_search\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"name\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 6\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"sku\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 7\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"manufacturer_value\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"status_value\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"url_key\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"tax_class_id_value\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"_search\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match_phrase_prefix\": {\n            \"name\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2,\n              \"analyzer\": \"prefix_search\"\n            }\n          }\n        },\n        {\n          \"match_phrase_prefix\": {\n            \"sku\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2,\n              \"analyzer\": \"sku_prefix_search\"\n            }\n          }\n        }\n      ],\n      \"must_not\": [\n        {\n          \"term\": {\n            \"category_permission_1_0\": \"-2\"\n          }\n        }\n      ],\n      \"minimum_should_match\": 1\n    }\n  },\n  \"aggregations\": {\n    \"price_bucket\": {\n      \"extended_stats\": {\n        \"field\": \"price_0_1\"\n      }\n    },\n    \"category_bucket\": {\n      \"terms\": {\n        \"field\": \"category_ids\",\n        \"size\": 500\n      }\n    }\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1439,7 +1451,7 @@
 	],
 	"variable": [
 		{
-			"id": "500fa7dd-52f3-4ffe-a987-6d961f3475bf",
+			"id": "4fc8f909-a4e1-45e0-ad1d-914f61f182f8",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
