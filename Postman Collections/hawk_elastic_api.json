@@ -1399,12 +1399,15 @@
 							"",
 							"",
 							"const jsonData = pm.response.json();",
-							"let nonCurrentIndex;",
+							"let ids = [];",
 							"for (let i = 0; i < jsonData.hits.hits.length; i++) {",
-							"    if (jsonData.IndexNames[i] === pm.variables.get(\"current_index_name\")) {",
-							"        continue;",
-							"    }",
-							"    pm.environment.set(\"index_name\", jsonData.IndexNames[i]);",
+							"    ids.push(jsonData.hits.hits[i].fields._id);",
+							"}",
+							"",
+							"if (ids) {",
+							"    console.info(ids);",
+							"} else {",
+							"    console.info(\"No ids found\");",
 							"}"
 						],
 						"type": "text/javascript"
@@ -1479,7 +1482,7 @@
 	],
 	"variable": [
 		{
-			"id": "1b96dd9a-b08a-4f7c-ab73-c4b4f704369f",
+			"id": "47f13e85-5cf9-4afe-9d0f-f89726217aa3",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
