@@ -1375,9 +1375,9 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "d0cb2324-c883-45a5-959a-4fd0f82a8d72",
+						"id": "918662ca-b5ae-4d63-8a5f-945217174596",
 						"exec": [
-							"var query = \"Canvas\";",
+							"var query = \"Yellow Strap\";",
 							"pm.variables.set(\"query\", query);"
 						],
 						"type": "text/javascript"
@@ -1386,7 +1386,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "95feb6f9-a2a0-459f-a3aa-3a63f1819cdf",
+						"id": "fb0ee743-dd41-4a63-a872-d5f356404378",
 						"exec": [
 							"pm.test(\"Response to have hits\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -1526,7 +1526,7 @@
 	],
 	"variable": [
 		{
-			"id": "8a9ae9a0-0670-4a53-a59b-9c5dac0f6285",
+			"id": "816f8a60-9976-4f24-b6a6-e4e1b07524ca",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
