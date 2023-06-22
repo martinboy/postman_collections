@@ -1377,7 +1377,7 @@
 					"script": {
 						"id": "d0cb2324-c883-45a5-959a-4fd0f82a8d72",
 						"exec": [
-							"var query = \"GR1085\";",
+							"var query = \"Canvas\";",
 							"pm.variables.set(\"query\", query);"
 						],
 						"type": "text/javascript"
@@ -1415,6 +1415,71 @@
 				}
 			],
 			"id": "9ea669b8-74a8-4bc0-9042-eb4d77abee3a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"from\": 0,\n  \"size\": 1000,\n  \"stored_fields\": \"_none_\",\n  \"explain\" : true,\n  \"docvalue_fields\": [\n    \"_id\",\n    \"_score\"\n  ],\n  \"sort\": [\n    {\n      \"_score\": {\n        \"order\": \"desc\"\n      }\n    }\n  ],\n  \"query\": {\n    \"bool\": {\n      \"must\": [\n        {\n          \"term\": {\n            \"category_ids\": \"42\"\n          }\n        },\n        {\n          \"terms\": {\n            \"visibility\": [\n              \"3\",\n              \"4\"\n            ]\n          }\n        }\n      ],\n      \"should\": [\n        {\n          \"match\": {\n            \"_search\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"name\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 6\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"sku\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 7\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"manufacturer_value\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"status_value\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"url_key\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"tax_class_id_value\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match\": {\n            \"_search\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2\n            }\n          }\n        },\n        {\n          \"match_phrase_prefix\": {\n            \"name\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2,\n              \"analyzer\": \"prefix_search\"\n            }\n          }\n        },\n        {\n          \"match_phrase_prefix\": {\n            \"sku\": {\n              \"query\": \"{{query}}\",\n              \"boost\": 2,\n              \"analyzer\": \"sku_prefix_search\"\n            }\n          }\n        }\n      ],\n      \"must_not\": [\n        {\n          \"term\": {\n            \"category_permission_1_0\": \"-2\"\n          }\n        }\n      ],\n      \"minimum_should_match\": 1\n    }\n  },\n  \"aggregations\": {\n    \"price_bucket\": {\n      \"extended_stats\": {\n        \"field\": \"price_0_1\"\n      }\n    },\n    \"category_bucket\": {\n      \"terms\": {\n        \"field\": \"category_ids\",\n        \"size\": 500\n      }\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "127.0.0.1:9200/magento2_product_1/_search"
+			},
+			"response": []
+		},
+		{
+			"name": "Elastic Search Magento - show one document",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d0cb2324-c883-45a5-959a-4fd0f82a8d72",
+						"exec": [
+							"var query = \"Canvas\";",
+							"pm.variables.set(\"query\", query);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "95feb6f9-a2a0-459f-a3aa-3a63f1819cdf",
+						"exec": [
+							"pm.test(\"Response to have hits\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    ",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.be.an(\"object\");",
+							"    pm.expect(jsonData.hits.hits).to.have.lengthOf.at.least(1);",
+							"    ",
+							"});",
+							"",
+							"",
+							"const jsonData = pm.response.json();",
+							"let ids = [];",
+							"for (let i = 0; i < jsonData.hits.hits.length; i++) {",
+							"    ids = ids.concat(jsonData.hits.hits[i].fields._id);",
+							"}",
+							"",
+							"if (ids) {",
+							"    console.info(ids);",
+							"} else {",
+							"    console.info(\"No ids found\");",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "e5e52fa2-7a38-464f-845e-d0e17837ad4c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1482,7 +1547,7 @@
 	],
 	"variable": [
 		{
-			"id": "1b3e2baa-9ebe-485a-8d12-28dc66f7b4a3",
+			"id": "88f4c64e-38fd-495f-a841-0d81f722b0fa",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
