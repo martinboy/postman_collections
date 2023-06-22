@@ -729,6 +729,38 @@
 				},
 				{
 					"name": "Search: By index name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8a7bee28-27ba-4170-8fe1-dada36444670",
+								"exec": [
+									"pm.test(\"Response to have results\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an(\"object\");",
+									"    pm.expect(jsonData.Results).to.have.lengthOf.at.least(1);",
+									"    ",
+									"});",
+									"",
+									"",
+									"const jsonData = pm.response.json();",
+									"let ids = [];",
+									"for (let i = 0; i < jsonData.Results.length; i++) {",
+									"    ids = ids.concat(jsonData.Results[i].DocId);",
+									"}",
+									"",
+									"if (ids) {",
+									"    console.info(ids);",
+									"} else {",
+									"    console.info(\"No ids found\");",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "9b30e04f-a8a4-478f-ac95-9128132a4562",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -754,7 +786,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"{{index_name}}\",\n  \"PageNo\": 1,\n  \"Keyword\": \"29A-023\"\n}"
+							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"{{index_name}}\",\n  \"PageNo\": 1,\n  \"Keyword\": \"Yellow Strap\"\n}"
 						},
 						"url": "{{search_api_url}}api/v2/search"
 					},
@@ -1377,7 +1409,7 @@
 					"script": {
 						"id": "918662ca-b5ae-4d63-8a5f-945217174596",
 						"exec": [
-							"var query = \"Yellow Strap\";",
+							"var query = \"Wool\";",
 							"pm.variables.set(\"query\", query);"
 						],
 						"type": "text/javascript"
@@ -1526,7 +1558,7 @@
 	],
 	"variable": [
 		{
-			"id": "44ce2caa-505a-4d4e-94ef-74294bed5624",
+			"id": "8b650c3d-4597-4e65-b273-eb17a2104211",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
