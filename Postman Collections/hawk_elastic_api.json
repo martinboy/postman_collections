@@ -791,6 +791,71 @@
 						"url": "{{search_api_url}}api/v2/search"
 					},
 					"response": []
+				},
+				{
+					"name": "Search: Field Specific",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8a7bee28-27ba-4170-8fe1-dada36444670",
+								"exec": [
+									"pm.test(\"Response to have results\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an(\"object\");",
+									"    pm.expect(jsonData.Results).to.have.lengthOf.at.least(1);",
+									"    ",
+									"});",
+									"",
+									"",
+									"const jsonData = pm.response.json();",
+									"let ids = [];",
+									"for (let i = 0; i < jsonData.Results.length; i++) {",
+									"    ids = ids.concat(jsonData.Results[i].DocId);",
+									"}",
+									"",
+									"if (ids) {",
+									"    console.info(ids);",
+									"} else {",
+									"    console.info(\"No ids found\");",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "6053efdc-05c9-4e6f-809a-0b3c6c951171",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"{{index_name}}\",\n  \"PageNo\": 1,\n  \"Keyword\": \"Yellow Strap\"\n}"
+						},
+						"url": "{{search_api_url}}api/v2/search"
+					},
+					"response": []
 				}
 			],
 			"id": "03b87b9e-3395-48a0-ae3e-30dc5ecb7233"
@@ -1558,7 +1623,7 @@
 	],
 	"variable": [
 		{
-			"id": "8b650c3d-4597-4e65-b273-eb17a2104211",
+			"id": "25ed3b09-d18d-4bac-86a5-2b123f7e9801",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
