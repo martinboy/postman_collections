@@ -786,7 +786,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"{{index_name}}\",\n  \"PageNo\": 1,\n  \"Keyword\": \"Yellow Strap\"\n}"
+							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"{{index_name}}\",\n  \"PageNo\": 1,\n  \"Keyword\": \"wool\",\n  \"IsInPreview\": true\n}"
 						},
 						"url": "{{search_api_url}}api/v2/search"
 					},
@@ -851,7 +851,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"{{index_name}}\",\n  \"PageNo\": 1,\n  \"Keyword\": \"Yellow Strap\"\n}"
+							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"{{index_name}}\",\n  \"Keyword\": \"\",\n  \"query\" : \"sku.keyword: GR1085\",\n  \"IsInPreview\": true,\n  \"ExplainDocId\": \"product_2044\"\n}"
 						},
 						"url": "{{search_api_url}}api/v2/search"
 					},
@@ -1623,7 +1623,7 @@
 	],
 	"variable": [
 		{
-			"id": "25ed3b09-d18d-4bac-86a5-2b123f7e9801",
+			"id": "96bd82c6-5b50-42bb-b70e-8c1f380af5b7",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
