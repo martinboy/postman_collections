@@ -786,7 +786,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"{{index_name}}\",\n  \"PageNo\": 1,\n  \"Keyword\": \"Yellow Strap\"\n}"
+							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"{{index_name}}\",\n  \"PageNo\": 1,\n  \"Keyword\": \"wool\",\n  \"IsInPreview\": true\n}"
 						},
 						"url": "{{search_api_url}}api/v2/search"
 					},
@@ -1564,7 +1564,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"query\": { \n        \"bool\": {\n         \"filter\": {\n                \"term\": {\n                   \"_id\": \"2046\"\n                }\n            }\n        }\n    }\n}",
+					"raw": "{\n    \"query\": { \n        \"bool\": {\n         \"filter\": {\n                \"term\": {\n                   \"_id\": \"46\"\n                }\n            }\n        }\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1623,7 +1623,7 @@
 	],
 	"variable": [
 		{
-			"id": "d84c5153-f989-4401-be98-23cd605256c5",
+			"id": "10300035-c591-4c58-9856-ae69c89afa59",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
