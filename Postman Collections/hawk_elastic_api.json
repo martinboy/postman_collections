@@ -890,7 +890,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"Keyword\": \"Bag\"\n}"
+							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"Keyword\": \"letter\",\n  \"DisplayFullResponse\": true\n}"
 						},
 						"url": "{{search_api_url}}api/v2/autocomplete"
 					},
@@ -1623,7 +1623,7 @@
 	],
 	"variable": [
 		{
-			"id": "10300035-c591-4c58-9856-ae69c89afa59",
+			"id": "5a93bb51-69a4-4e29-a925-42312d585a13",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
