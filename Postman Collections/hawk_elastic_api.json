@@ -1602,6 +1602,25 @@
 				"url": "127.0.0.1:9200/magento2_product_1/_search"
 			},
 			"response": []
+		},
+		{
+			"name": "IndexingApi Ping",
+			"id": "922f5ca4-e5a5-41c0-bb3a-ecab023ec045",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-HawkSearch-ApiKey",
+						"value": "{{api_key}}",
+						"type": "text"
+					}
+				],
+				"url": "{{indexing_api_url}}api/ping"
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -1651,7 +1670,6 @@
 	],
 	"variable": [
 		{
-			"id": "73802f3f-994b-475e-a2ed-92dcb7c70f34",
 			"key": "env",
 			"value": "prod",
 			"type": "string"
