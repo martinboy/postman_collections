@@ -756,6 +756,39 @@
 					"response": []
 				},
 				{
+					"name": "Landing Page: By index",
+					"id": "e242ec2b-2985-4140-a25e-1e5df17c4817",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-HawkSearch-ApiKey",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ClientGuid\": \"{{tracking_key}}\",\n  \"IndexName\": \"{{index_name}}\",\n  \"CustomUrl\": \"/brands/columbia/\"\n}"
+						},
+						"url": "{{search_api_url}}api/v2/search"
+					},
+					"response": []
+				},
+				{
 					"name": "Search: By index name",
 					"event": [
 						{
